@@ -1,0 +1,89 @@
+/* Author CSS */
+body {
+  margin: 0;
+  color: $paragraph-color;
+  font-family: $body-font;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  color: $primary-color;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  color: $heading-color;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+p {
+  color: $paragraph-color;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus,
+.slick-slide {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  transition: $transition;
+}
