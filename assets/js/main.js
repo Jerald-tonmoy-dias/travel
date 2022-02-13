@@ -18,42 +18,95 @@
             }
         });
 
+        //scroll height
+        // $(window).bind('scroll', function () {
+        //     if ($(window).scrollTop() > 200) {
+        //         $('.header-section').addClass('fixed');
+        //         $('.header-info-wrapper').addClass('shoe');
+        //         // console.log('crosed 200 px');
+        //     } else {
+        //         $('.header-section').removeClass('fixed');
+        //         $('.header-info-wrapper').removeClass('show');
+        //     }
+        // });
+
         // nice-select
         $('select').niceSelect();
 
-        var numSlick = 0;
-        $('.slider-products').each(function () {
-            numSlick++;
-            $(this).addClass('slider-' + numSlick).slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                fade: true,
-                asNavFor: '.slider-nav.slider-' + numSlick
-            });
+        // hero slider activation
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav',
+            swipe: true,
+            touchMove: true
         });
+        $('.slider-nav').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: false,
+            centerMode: false,
+            focusOnSelect: false,
+            arrows: false,
+            swipe: true,
+            touchMove: true,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
 
-        var numSlick = 0;
-        $('.slider-nav').each(function () {
-            numSlick++;
-            $(this).addClass('slider-' + numSlick).slick({
-                vertical: false,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                asNavFor: '.slider-products.slider-' + numSlick,
-                arrow: false,
-                focusOnSelect: true,
-                responsive: [
-                    {
-                        breakpoint: 800,
-                        settings: {
-                            slidesToShow: 3,
-                        }
                     }
-                ]
-            });
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+
+                    }
+                },
+            ]
         });
 
+        // input focus btn
+        $("#location").focus(function () {
+            $(this).parent().removeClass("hide");
+            $(this).parent().addClass("show");
+        }).blur(function () {
+            $(this).parent().removeClass("show");
+            $(this).parent().addClass("hide");
+        });
+
+        // date input
+        $("#check_in").focus(function () {
+            $(this).attr('type', 'date');
+
+        }).blur(function () {
+            $(this).attr('type', 'text');
+        });
+
+        $("#check_out").focus(function () {
+            $(this).attr('type', 'date');
+
+        }).blur(function () {
+            $(this).attr('type', 'text');
+        });
+
+        // add guest
+        $("#add_guest").click(function () {
+            $(this).parent().toggleClass("show");
+            $('.cancel-guest').toggleClass("show");
+        })
+
+        $('.cancel-guest').click(function () {
+            $("#add_guest").parent().removeClass('show');
+            $(this).removeClass('show');
+        });
 
         /* end point */
     });

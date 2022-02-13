@@ -15,21 +15,74 @@
     top: 30%;
     left: 5%;
     width: 560px;
+    @include desktop() {
+      top: 19%;
+    }
+    @include small-device() {
+      position: static;
+      padding: 80px 30px;
+      width: auto;
+    }
   }
   .hero-title {
     color: $white-color;
+    @include tablet() {
+      font-size: 36px;
+    }
+    @include small-device() {
+      font-size: 30px;
+    }
   }
   .hero-content {
     color: $white-color;
   }
 }
 .hero-slider-content {
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 660px;
+  border-radius: 10px;
+  @include desktop() {
+    height: 500px;
+    background-size: cover;
+  }
+  @include tablet() {
+    height: 400px;
+    background-size: cover;
+  }
+  @include small-device() {
+    height: auto;
+    background-size: cover;
+  }
 }
 .hero-nav-slider {
-  margin-top: -10%;
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+  .slick-slide.slick-current.slick-active {
+    .hero-nav-img {
+      border: 3px solid $primary-color;
+    }
+  }
+  .hero-nav-img {
+    width: 220px;
+    border-radius: 20px;
+    @include desktop() {
+      width: 170px;
+    }
+    @include small-device() {
+      width: 135px;
+    }
+  }
+  .slick-track {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.hero-nav-slider {
+  margin-top: -70px;
 }
 
 // travel-package-section

@@ -37,9 +37,256 @@
     </div>
 
     <!-- header -->
-    <header>
-        <h1>header</h1>
+    <header class="header-section pt-40 pb-40">
+        <div class="container custome-container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-xl-2 col-lg-6 col-sm-6 d-flex justify-content-center justify-content-xl-start ">
+
+                    <button type="button" class="btn1 me-4 d-md-none" data-bs-toggle="modal"
+                        data-bs-target="#clientInfo"><i class="fas fa-bars"></i></button>
+
+                    <img class="logo" src="./assets/images/logo.png" alt="logo">
+                </div>
+                <div class="col-xl-8 col-md-12 my-4 my-xl-0  d-none d-md-block">
+                    <div class="header-info-wrapper  d-flex align-items-center">
+                        <!-- location -->
+                        <div class="form-grp location">
+                            <label class="label" for="location"><i class="fas fa-map-marker-alt"></i> location</label>
+
+                            <input autocomplete="off" class="form-input" id="location" type="text"
+                                placeholder="select where are you going">
+                            <div class="flexible-wrp">
+                                <h6>GO ANYWHERE, ANYTIME</h6>
+                                <a target="_blank" href="#" class="flexible-search"> <i
+                                        class="fas fa-arrow-right"></i>I'm flexible</a>
+                            </div>
+
+                        </div>
+
+                        <span class="header-separator"></span>
+
+                        <!-- typing housing -->
+                        <div class="form-grp">
+                            <label class="label" for="housing">
+                                <i class="fas fa-home"></i>
+                                types of housing</label>
+                            <select name="" id="housing" class="housing">
+                                <option value="">select type</option>
+                                <option value="">medium</option>
+                                <option value="">small</option>
+                            </select>
+                        </div>
+
+                        <span class="header-separator"></span>
+                        <!-- check in -->
+                        <div class="form-grp">
+                            <label class="label" for="check_in">
+                                <i class="fas fa-check-circle"></i>
+                                check in
+                            </label>
+                            <input class="form-input" id="check_in" type="text" placeholder="add date">
+                        </div>
+
+                        <span class="header-separator"></span>
+
+                        <!-- check out -->
+                        <div class="form-grp">
+                            <label class="label" for="check_out">
+                                <i class="fas fa-check-square"></i>
+                                check out
+                            </label>
+                            <input class="form-input" id="check_out" type="text" placeholder="add date">
+                        </div>
+
+                        <span class="header-separator"></span>
+                        <!-- check out -->
+                        <div class="form-grp position-relative" id="guest-form-grp">
+                            <label class="label" for="check_out">
+                                <i class="fas fa-user"></i> guest
+                            </label>
+
+                            <input autocomplete="off" class="form-input add-guest" id="add_guest" type="text"
+                                placeholder="add guest">
+                            <span class="cancel-guest"><i class="fas fa-times"></i></span>
+
+                            <!-- add guest view-->
+                            <div class="add_guest_wrapper">
+                                <ul>
+                                    <li class="d-flex list justify-content-between">
+                                        <div>
+                                            <span class="guest-title">Adult</span>
+                                            <span class="guest-subtitle">ages 12 0r above</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <button class="add-guest-btn"><i class="fas fa-plus"></i></button>
+                                            <input value="0" type="text" class="guest_count">
+                                            <button class="add-guest-btn"><i class="fas fa-minus"></i></button>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex list justify-content-between">
+                                        <div>
+                                            <span class="guest-title">Adult</span>
+                                            <span class="guest-subtitle">ages 12 0r above</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <button class="add-guest-btn"><i class="fas fa-plus"></i></button>
+                                            <input value="0" type="text" class="guest_count">
+                                            <button class="add-guest-btn"><i class="fas fa-minus"></i></button>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex list justify-content-between">
+                                        <div>
+                                            <span class="guest-title">Adult</span>
+                                            <span class="guest-subtitle">ages 12 0r above</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <button class="add-guest-btn"><i class="fas fa-plus"></i></button>
+                                            <input value="0" type="text" class="guest_count">
+                                            <button class="add-guest-btn"><i class="fas fa-minus"></i></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="btn1 header-search-btn">search</button>
+
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-6 col-sm-6 d-flex justify-content-center justify-content-xl-end">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-globe"></i>
+                        <div class="form-grp">
+                            <select name="" id="">
+                                <option value="">
+                                    usa
+                                </option>
+                                <option value="">
+                                    aus
+                                </option>
+                            </select>
+                        </div>
+
+                        <button class="login-btn"><i class="fas fa-user-circle login-icon"></i> login</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </header>
+
+    <!-- modal -->
+    <div class="modal fade" id="clientInfo" tabindex="-1" aria-labelledby="clientInfoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content mobile-info-wrapper">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="clientInfoLabel">New message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mobile-header-info-wrapper header-info-wrapper">
+                        <!-- location -->
+                        <div class="form-grp location">
+                            <label class="label" for="location"><i class="fas fa-map-marker-alt"></i> location</label>
+
+                            <input autocomplete="off" class="form-input" id="location" type="text"
+                                placeholder="select where are you going">
+                            <!-- <div class="flexible-wrp">
+                                <h6>GO ANYWHERE, ANYTIME</h6>
+                                <a target="_blank" href="#" class="flexible-search"> <i
+                                        class="fas fa-arrow-right"></i>I'm flexible</a>
+                            </div> -->
+
+                        </div>
+
+                        <!-- typing housing -->
+                        <div class="form-grp">
+                            <label class="label" for="housing">
+                                <i class="fas fa-home"></i>
+                                types of housing</label>
+                            <select name="" id="housing" class="mobile-housing">
+                                <option value="">select type</option>
+                                <option value="">medium</option>
+                                <option value="">small</option>
+                            </select>
+                        </div>
+
+                        <!-- check in -->
+                        <div class="form-grp">
+                            <label class="label" for="check_in">
+                                <i class="fas fa-check-circle"></i>
+                                check in
+                            </label>
+                            <input class="form-input" id="check_in" type="date" placeholder="add date">
+                        </div>
+
+                        <!-- check out -->
+                        <div class="form-grp">
+                            <label class="label" for="check_out">
+                                <i class="fas fa-check-square"></i>
+                                check out
+                            </label>
+                            <input class="form-input" id="check_out" type="date" placeholder="add date">
+                        </div>
+
+                        <!-- check out -->
+                        <div class="form-grp position-relative" id="guest-form-grp">
+                            <label class="label" for="check_out">
+                                <i class="fas fa-user"></i> guest
+                            </label>
+
+                            <input autocomplete="off" class="form-input add-guest" id="add_guest" type="text"
+                                placeholder="add guest">
+                            <span class="cancel-guest"><i class="fas fa-times"></i></span>
+
+                            <!-- add guest view-->
+                            <div class="add_guest_wrapper">
+                                <ul>
+                                    <li class="d-flex list justify-content-between">
+                                        <div>
+                                            <span class="guest-title">Adult</span>
+                                            <span class="guest-subtitle">ages 12 0r above</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <button class="add-guest-btn"><i class="fas fa-plus"></i></button>
+                                            <input value="0" type="text" class="guest_count">
+                                            <button class="add-guest-btn"><i class="fas fa-minus"></i></button>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex list justify-content-between">
+                                        <div>
+                                            <span class="guest-title">Adult</span>
+                                            <span class="guest-subtitle">ages 12 0r above</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <button class="add-guest-btn"><i class="fas fa-plus"></i></button>
+                                            <input value="0" type="text" class="guest_count">
+                                            <button class="add-guest-btn"><i class="fas fa-minus"></i></button>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex list justify-content-between">
+                                        <div>
+                                            <span class="guest-title">Adult</span>
+                                            <span class="guest-subtitle">ages 12 0r above</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <button class="add-guest-btn"><i class="fas fa-plus"></i></button>
+                                            <input value="0" type="text" class="guest_count">
+                                            <button class="add-guest-btn"><i class="fas fa-minus"></i></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn1 header-search-btn">search</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- hero section -->
     <div class="hero-section">
@@ -47,12 +294,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="slider slider-products">
+                    <div class="slider slider-products slider-for">
                         <div class="hero-slider-content" style="background-image: url('./assets/images/hero1.png');">
                             <div class="inner-content-wrapper">
                                 <h1 class="hero-title mb-3">
                                     Welcome to Your
-                                    Favorite Destination
+                                    Favorite Destination 1
                                 </h1>
                                 <p class="hero-content">The best travel your journey respectful of the enviroment</p>
                             </div>
@@ -61,7 +308,7 @@
                             <div class="inner-content-wrapper">
                                 <h1 class="hero-title mb-3">
                                     Welcome to Your
-                                    Favorite Destination
+                                    Favorite Destination 2
                                 </h1>
                                 <p class="hero-content">The best travel your journey respectful of the enviroment</p>
                             </div>
@@ -70,7 +317,7 @@
                             <div class="inner-content-wrapper">
                                 <h1 class="hero-title mb-3">
                                     Welcome to Your
-                                    Favorite Destination
+                                    Favorite Destination 3
                                 </h1>
                                 <p class="hero-content">The best travel your journey respectful of the enviroment</p>
                             </div>
@@ -79,7 +326,7 @@
                             <div class="inner-content-wrapper">
                                 <h1 class="hero-title mb-3">
                                     Welcome to Your
-                                    Favorite Destination
+                                    Favorite Destination 4
                                 </h1>
                                 <p class="hero-content">The best travel your journey respectful of the enviroment</p>
                             </div>
@@ -88,19 +335,29 @@
                             <div class="inner-content-wrapper">
                                 <h1 class="hero-title mb-3">
                                     Welcome to Your
-                                    Favorite Destination
+                                    Favorite Destination 5
+                                </h1>
+                                <p class="hero-content">The best travel your journey respectful of the enviroment</p>
+                            </div>
+                        </div>
+                        <div class="hero-slider-content" style="background-image: url('./assets/images/hero1.png');">
+                            <div class="inner-content-wrapper">
+                                <h1 class="hero-title mb-3">
+                                    Welcome to Your
+                                    Favorite Destination 6
                                 </h1>
                                 <p class="hero-content">The best travel your journey respectful of the enviroment</p>
                             </div>
                         </div>
 
                     </div>
-                    <div class="slider slider-nav hero-nav-slider">
-                        <div><img src="./assets/images/nav1.png" alt=""></div>
-                        <div><img src="./assets/images/nav1.png" alt=""></div>
-                        <div><img src="./assets/images/nav1.png" alt=""></div>
-                        <div><img src="./assets/images/nav1.png" alt=""></div>
-                        <div><img src="./assets/images/nav1.png" alt=""></div>
+                    <div class="slider slider-nav hero-nav-slider slider-nav">
+                        <div><img class="hero-nav-img" src="./assets/images/nav1.png" alt=""></div>
+                        <div><img class="hero-nav-img" src="./assets/images/nav2.png" alt=""></div>
+                        <div><img class="hero-nav-img" src="./assets/images/nav3.png" alt=""></div>
+                        <div><img class="hero-nav-img" src="./assets/images/nav4.png" alt=""></div>
+                        <div><img class="hero-nav-img" src="./assets/images/nav5.png" alt=""></div>
+                        <div><img class="hero-nav-img" src="./assets/images/nav1.png" alt=""></div>
 
                     </div>
                 </div>
@@ -130,7 +387,7 @@
                 </div>
                 <div class="col-lg-4 col-lg-6 col-sm-6 col-12 custom-col-lg-4 mb-4">
                     <div class="single-travel-package">
-                        <img class="travel-img mb-3" src="./assets/images/sp1.png" alt="img1">
+                        <img class="travel-img mb-3" src="./assets/images/sp2.png" alt="img1">
 
                         <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
 
@@ -145,7 +402,7 @@
                 </div>
                 <div class="col-lg-4 col-lg-6 col-sm-6 col-12 custom-col-lg-4 mb-4">
                     <div class="single-travel-package">
-                        <img class="travel-img mb-3" src="./assets/images/sp1.png" alt="img1">
+                        <img class="travel-img mb-3" src="./assets/images/sp3.png" alt="img1">
 
                         <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
 
@@ -160,7 +417,7 @@
                 </div>
                 <div class="col-lg-4 col-lg-6 col-sm-6 col-12 custom-col-lg-4 mb-4">
                     <div class="single-travel-package">
-                        <img class="travel-img mb-3" src="./assets/images/sp1.png" alt="img1">
+                        <img class="travel-img mb-3" src="./assets/images/sp4.png" alt="img1">
 
                         <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
 
@@ -175,7 +432,7 @@
                 </div>
                 <div class="col-lg-4 col-lg-6 col-sm-6 col-12 custom-col-lg-4 mb-4">
                     <div class="single-travel-package">
-                        <img class="travel-img mb-3" src="./assets/images/sp1.png" alt="img1">
+                        <img class="travel-img mb-3" src="./assets/images/sp5.png" alt="img1">
 
                         <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
 
@@ -208,7 +465,7 @@
                 <div class="row">
                     <div class="col-lg-3  col-sm-6 col-12 mb-4">
                         <div class="single-travel-package">
-                            <img class="travel-img mb-3" src="./assets/images/sp1.png" alt="img1">
+                            <img class="travel-img mb-3" src="./assets/images/p1.png" alt="img1">
 
                             <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
 
@@ -223,7 +480,7 @@
                     </div>
                     <div class="col-lg-3  col-sm-6 col-12  mb-4">
                         <div class="single-travel-package">
-                            <img class="travel-img mb-3" src="./assets/images/sp1.png" alt="img1">
+                            <img class="travel-img mb-3" src="./assets/images/p2.png" alt="img1">
 
                             <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
 
@@ -238,7 +495,7 @@
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12  mb-4">
                         <div class="single-travel-package">
-                            <img class="travel-img mb-3" src="./assets/images/sp1.png" alt="img1">
+                            <img class="travel-img mb-3" src="./assets/images/p3.png" alt="img1">
 
                             <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
 
@@ -253,7 +510,7 @@
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12  mb-4">
                         <div class="single-travel-package">
-                            <img class="travel-img mb-3" src="./assets/images/sp1.png" alt="img1">
+                            <img class="travel-img mb-3" src="./assets/images/p4.png" alt="img1">
 
                             <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
 
@@ -285,7 +542,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div class="single-home-blog" style="background-image: url('./assets/images/sb1.png');">
+                    <div class="single-home-blog" style="background-image: url('./assets/images/sb2.png');">
                         <span class="overlay"></span>
                         <a href="#" class="mb-3 title">Things to do on
                             your trip</a>
@@ -293,7 +550,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div class="single-home-blog" style="background-image: url('./assets/images/sb1.png');">
+                    <div class="single-home-blog" style="background-image: url('./assets/images/sb3.png');">
                         <span class="overlay"></span>
                         <a href="#" class="mb-3 title">Things to do on
                             your trip</a>
