@@ -21,6 +21,7 @@ TABLE OF CONTENTS:
 >> Theme
 >> Homepage 1
 >> About page
+>> Places
 
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
@@ -1586,3 +1587,59 @@ a {
 
 .single-main-about-section .main-about-content {
   padding-left: 0; }
+
+/* Places */
+.travel-sidebar-widget {
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(15, 49, 120, 0.1);
+  box-shadow: 0px 0px 13px 0px rgba(15, 49, 120, 0.1);
+  padding: 30px 20px; }
+
+.search-place .label {
+  text-transform: capitalize; }
+
+.search-place .nice-select.housing {
+  border: 1px solid #eaeaea;
+  width: 100%;
+  padding: 20px;
+  line-height: 0px;
+  display: block; }
+  .search-place .nice-select.housing .current {
+    font-size: 16px; }
+
+.search-place .form-input {
+  width: 120px;
+  border: 1px solid #eaeaea;
+  padding: 10px;
+  border-radius: 5px; }
+
+.search-place .nice-select.open .list {
+  z-index: 999;
+  width: 100%; }
+
+.checkbox-wrapper {
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 10px 0 20px; }
+  .checkbox-wrapper .single-checkbox {
+    margin: 10px 10px 0; }
+  .checkbox-wrapper .check-with-label {
+    display: none; }
+  .checkbox-wrapper .label-for-check {
+    border: 1px solid #edf4ff;
+    padding: 0px 7px;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: capitalize;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+  .checkbox-wrapper .check-with-label:checked + .label-for-check {
+    background: #3cd2d1;
+    color: #ffffff; }
