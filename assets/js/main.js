@@ -19,58 +19,64 @@
         });
 
         //scroll height
-        // $(window).bind('scroll', function () {
-        //     if ($(window).scrollTop() > 200) {
-        //         $('.header-section').addClass('fixed');
-        //         $('.header-info-wrapper').addClass('shoe');
-        //         // console.log('crosed 200 px');
-        //     } else {
-        //         $('.header-section').removeClass('fixed');
-        //         $('.header-info-wrapper').removeClass('show');
-        //     }
-        // });
+        $(window).bind('scroll', function () {
+            $('.header-section').removeClass('add-padding');
+            if ($(window).scrollTop() > 200) {
+                $('.header-section').addClass('fixed');
+                $('.header-info-wrapper').addClass('hide-nav');
+                $('.header-info-wrapper').parent().removeClass('my-4');
+                $('.header-input').addClass('show');
+                // console.log('crosed 200 px');
+            } else {
+                $('.header-section').removeClass('fixed');
+                $('.header-info-wrapper').removeClass('hide-nav');
+                $('.header-input').removeClass('show');
+                $('.header-info-wrapper').parent().addClass('my-4');
+            }
+        });
+
+        // header scroll nav effect
+        $('.header-input').click(function () {
+            $('.header-info-wrapper').removeClass('hide-nav');
+            $('.header-input').removeClass('show');
+            $('.header-section').addClass('add-padding');
+
+        });
+
 
         // nice-select
         $('select').niceSelect();
 
-        // hero slider activation
-        $('.slider-for').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.slider-nav',
-            swipe: true,
-            touchMove: true
+        // swipper slider
+        var swiper = new Swiper(".travelSwiper", {
+            loop: true,
+            freeMode: true,
+            watchSlidesProgress: true,
+            breakpoints: {
+                375: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                576: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                992: {
+                    spaceBetween: 10,
+                    slidesPerView: 5,
+                },
+            }
         });
-        $('.slider-nav').slick({
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            asNavFor: '.slider-for',
-            dots: false,
-            centerMode: false,
-            focusOnSelect: false,
-            arrows: false,
-            swipe: true,
-            touchMove: true,
-            responsive: [
-                {
-                    breakpoint: 991,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-
-                    }
-                },
-            ]
+        var swiper2 = new Swiper(".tarvelSwiper2", {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
         });
 
         // input focus btn

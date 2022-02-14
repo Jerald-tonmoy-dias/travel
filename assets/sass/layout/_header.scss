@@ -1,10 +1,16 @@
 /* Header Section */
 .header-section {
-  transition: 0.3s;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transition: 0.5s;
+
   .logo {
     width: 160px;
     @include portrait-phone() {
       margin-bottom: 10px;
+    }
+    @include desktop() {
+      width: 80px;
     }
   }
   .login-btn {
@@ -78,6 +84,18 @@
       font-size: 14px;
       padding: 5px 24px;
     }
+    @include desktop() {
+      width: 100px;
+      height: 30px;
+      font-size: 12px;
+      line-height: 0;
+      margin: 0;
+      text-align: center;
+      border-radius: 5px;
+      &::before {
+        // content: initial;
+      }
+    }
   }
 
   .add-guest {
@@ -93,7 +111,7 @@
 .add_guest_wrapper {
   position: absolute;
   top: 120%;
-  z-index: 1;
+  z-index: 999;
   width: 280px;
   border-radius: 20px;
   background: $white-color;
@@ -182,6 +200,54 @@
     display: inline-block;
     margin: 0 10px;
   }
+  &.hide-nav {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+// header-input
+.header-input {
+  padding: 8px 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid $border-color;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 13px 0px rgba(15, 49, 120, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 10px 18px 0px rgba(15, 49, 120, 0.1);
+    padding: 8px 30px;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+  .input {
+    cursor: pointer;
+    border: none;
+    &:disabled {
+      background: #fff;
+    }
+  }
+  .search-btn {
+    border: none;
+    border-radius: 50%;
+    color: $white-color;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: $primary-color;
+    display: inline-block;
+  }
 }
 // cancel-guest
 .cancel-guest {
@@ -216,8 +282,12 @@
   background: $white-color;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 16px 54px 0px rgba(15, 49, 120, 0.1);
+  margin-top: 0;
 }
-
+.header-section.add-padding {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 .trigger-input-wrapper {
   border: 1px solid $primary-color;
   width: 400px;
@@ -243,6 +313,15 @@
     opacity: 1;
     visibility: visible;
     display: block;
+  }
+}
+.mobile-trigger-btn {
+  @include small-device() {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center !important;
+    padding: 0 !important;
   }
 }
 
@@ -286,4 +365,9 @@
   &:hover {
     border: 1px solid $secondary-color;
   }
+}
+.modal-header-info-wrapper.modal-header-info-wrapper {
+  opacity: 1;
+  visibility: visible;
+  display: block;
 }

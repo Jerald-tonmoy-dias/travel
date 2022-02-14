@@ -10,13 +10,20 @@
 
 // hero section
 .hero-section {
+  @include mobile-device {
+    margin-top: 40px;
+  }
   .inner-content-wrapper {
     position: absolute;
-    top: 30%;
+    top: 24%;
     left: 5%;
     width: 560px;
+    z-index: 999;
     @include desktop() {
       top: 19%;
+    }
+    @include tablet() {
+      top: 28%;
     }
     @include small-device() {
       position: static;
@@ -41,7 +48,41 @@
   background-size: contain;
   background-repeat: no-repeat;
   height: 660px;
-  border-radius: 10px;
+  border-radius: 20px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    background: linear-gradient(
+      90deg,
+      rgba(2, 41, 98, 0.7343312324929971) 0%,
+      rgba(2, 41, 98, 0) 100%
+    );
+    z-index: 0;
+  }
+  &::before {
+    content: "";
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 16%;
+    bottom: -36px;
+    left: 0;
+    right: 0;
+    border-radius: 20px;
+
+    background: linear-gradient(
+      -180deg,
+      rgba(255, 255, 255, -17%) 8%,
+      white 37%
+    );
+    z-index: 1;
+  }
   @include desktop() {
     height: 500px;
     background-size: cover;
@@ -56,11 +97,7 @@
   }
 }
 .hero-nav-slider {
-  .slick-slide {
-    display: flex;
-    justify-content: center;
-  }
-  .slick-slide.slick-current.slick-active {
+  .swiper-slide-thumb-active {
     .hero-nav-img {
       border: 3px solid $primary-color;
     }
@@ -75,14 +112,29 @@
       width: 135px;
     }
   }
-  .slick-track {
-    display: flex;
-    justify-content: center;
-  }
 }
 
-.hero-nav-slider {
-  margin-top: -70px;
+// hero swiper slider
+.travelSwiper {
+  top: -70px;
+  @include small-device {
+    top: -45px;
+  }
+}
+.swiper-slide {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 // travel-package-section
