@@ -50,6 +50,7 @@
     cursor: pointer;
     text-transform: capitalize;
     transition: 0.3s;
+    font-size: 14px;
   }
   .check-with-label:checked + .label-for-check {
     background: $primary-color;

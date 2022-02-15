@@ -391,7 +391,7 @@ a {
         width: 80px; } }
   .header-section .login-btn {
     border: 1px solid #3cd2d1;
-    font-size: 12px;
+    font-size: 14px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1842,7 +1842,8 @@ a {
   background-color: white;
   -webkit-box-shadow: 0px 0px 13px 0px rgba(15, 49, 120, 0.1);
   box-shadow: 0px 0px 13px 0px rgba(15, 49, 120, 0.1);
-  padding: 10px 10px 30px 10px; }
+  padding: 10px 10px 30px 10px;
+  height: 100%; }
   .single-travel-package .travel-img {
     border-radius: 10px; }
     @media (min-width: 992px) {
@@ -1852,20 +1853,25 @@ a {
     text-transform: capitalize;
     font-weight: 700;
     color: #022962;
-    display: inline-block; }
+    display: inline-block;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .single-travel-package .single-title:hover {
+      color: #3cd2d1; }
   .single-travel-package .single-location {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     display: inline-block;
     text-transform: capitalize; }
   .single-travel-package .single-review {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     display: inline-block;
     text-transform: capitalize; }
   .single-travel-package .single-price {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     display: inline-block;
     text-transform: capitalize; }
   .single-travel-package .single-price span {
@@ -1884,6 +1890,9 @@ a {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat; }
+  @media (max-width: 991px) {
+    .single-home-blog {
+      padding: 20px; } }
   .single-home-blog .overlay {
     border-radius: 20px;
     position: absolute;
@@ -1904,13 +1913,27 @@ a {
     font-weight: 700;
     position: relative;
     z-index: 1;
-    color: #ffffff; }
+    color: #ffffff;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .single-home-blog .title:hover {
+      color: #3cd2d1; }
+    @media (max-width: 991px) {
+      .single-home-blog .title {
+        font-size: 20px; } }
     @media (min-width: 992px) {
       .single-home-blog .title {
         padding-right: 38%; } }
+    @media (max-width: 575.98px) {
+      .single-home-blog .title {
+        display: block; } }
   .single-home-blog .btn2 {
     position: relative;
     z-index: 1; }
+    @media (max-width: 991px) {
+      .single-home-blog .btn2 {
+        padding: 5px 20px; } }
 
 /* About page */
 .main-about-section {
@@ -1988,7 +2011,8 @@ a {
     text-transform: capitalize;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
-    transition: 0.3s; }
+    transition: 0.3s;
+    font-size: 14px; }
   .checkbox-wrapper .check-with-label:checked + .label-for-check {
     background: #3cd2d1;
     color: #ffffff; }
