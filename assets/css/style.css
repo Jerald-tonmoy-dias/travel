@@ -785,10 +785,6 @@ a {
           color: #3cd2d1; }
     .header-two-content-wrapper .header-menu-two .has-submenu {
       position: relative; }
-      .header-two-content-wrapper .header-menu-two .has-submenu::after {
-        content: "\f0dd";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900; }
       .header-two-content-wrapper .header-menu-two .has-submenu .submenu {
         position: absolute;
         top: 220%;

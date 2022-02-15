@@ -17,9 +17,7 @@
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/font-awsome-all.min.css" />
-  <link rel="stylesheet" href="assets/css/meanmenu.css" />
   <link rel="stylesheet" href="assets/css/magnific-popup.css" />
-  <link rel="stylesheet" href="assets/css/slick.css" />
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/nice-select.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -58,12 +56,14 @@
               <input class="form-control input" type="text" placeholder='start you search'>
               <button class="header-two-search-btn">search</button>
             </div>
-            <!-- menu -->
-
+            <!-- desktop menu -->
             <ul class="header-menu-two">
               <li><a class="link" href="#">home</a></li>
               <li><a class="link" href="#">maldives</a></li>
-              <li class="has-submenu"><a class="link" href="#">places to go</a>
+              <li class="has-submenu"><a class="link" href="#">
+                  places to go
+                  <i class="fas fa-sort-down d-inline-block ms-2"></i>
+                </a>
                 <ul class="submenu">
                   <li><a class="link" href="#">place 1</a>
                   <li><a class="link" href="#">place 2</a>
@@ -72,8 +72,6 @@
               </li>
               <li><a class="link" href="#">about</a></li>
             </ul>
-
-
           </div>
         </div>
 
@@ -96,7 +94,7 @@
     </div>
   </header>
 
-  <!-- mobile sidebar  -->
+  <!-- mobile menu sidebar  -->
   <div class='dashboard dashboard-compact'>
     <div class="dashboard-nav ">
 
@@ -767,13 +765,8 @@
   <!-- Javascript Files -->
   <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
   <script src="assets/js/vendor/bootstrap.min.js"></script>
-  <script src="assets/js/vendor/slick.min.js"></script>
   <script src="assets/js/vendor/swiper-bundle.min.js"></script>
-  <script src="assets/js/vendor/counterup.min.js"></script>
-  <script src="assets/js/vendor/countdown.js"></script>
   <script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/vendor/jquery.meanmenu.min.js"></script>
-  <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
   <script src="assets/js/vendor/waypoints.min.js"></script>
   <script src="assets/js/vendor/easing.min.js"></script>
   <script src="assets/js/vendor/jquery-ui.js"></script>
@@ -781,6 +774,19 @@
   <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
   <script src="assets/js/vendor/leaflet.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+
+    // map
+    var map = L.map('map').setView([51.505, -0.09], 13);
+    var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1
+    }).addTo(map);
+  </script>
 </body>
 
 </html>
