@@ -1,903 +1,731 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Page Title -->
-    <title>All place - Travel HTML5 Template</title>
+<head>
+  <!-- Required Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Favicon Icon -->
-    <link rel="shortcut icon" href="favicon.png" />
+  <!-- Page Title -->
+  <title>All place - Travel HTML5 Template</title>
 
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/animate.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/font-awsome-all.min.css" />
-    <link rel="stylesheet" href="assets/css/meanmenu.css" />
-    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
-    <link rel="stylesheet" href="assets/css/slick.css" />
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/css/nice-select.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+  <!-- Favicon Icon -->
+  <link rel="shortcut icon" href="favicon.png" />
 
-  <body>
-    <!-- Preloader Starts -->
-    <div class="preloader" id="preloader">
-      <div class="preloader-inner">
-        <div class="spinner">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
-        </div>
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/font-awsome-all.min.css" />
+  <link rel="stylesheet" href="assets/css/meanmenu.css" />
+  <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/nice-select.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Preloader Starts -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
       </div>
     </div>
+  </div>
 
-    <!-- header -->
-    <header class="header-section">
-      <div class="container custome-container">
-        <div class="row align-items-center justify-content-center">
-          <div
-            class="col-xl-2 col-lg-1 col-sm-6 d-flex justify-content-center justify-content-xl-start"
-          >
-            <button
-              type="button"
-              class="btn1 mobile-trigger-btn me-4 d-lg-none"
-              data-bs-toggle="modal"
-              data-bs-target="#clientInfo"
-            >
-              <i class="fas fa-bars"></i>
+  <!-- header -->
+  <header class="header-section">
+    <div class="container custome-container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-xl-2 col-lg-1 col-sm-6 d-flex justify-content-center justify-content-xl-start">
+          <button type="button" class="btn1 mobile-trigger-btn me-4 d-lg-none" data-bs-toggle="modal"
+            data-bs-target="#clientInfo">
+            <i class="fas fa-bars"></i>
+          </button>
+          <img class="logo" src="./assets/images/logo.png" alt="logo" />
+        </div>
+
+        <div class="col-xl-8 col-lg-9 col-md-12 my-4 my-xl-0 d-none d-lg-block position-relative">
+          <div class="header-info-wrapper d-flex align-items-center">
+            <!-- location -->
+            <div class="form-grp location">
+              <label class="label" for="location"><i class="fas fa-map-marker-alt"></i> location</label>
+
+              <input autocomplete="off" class="form-input" id="location" type="text"
+                placeholder="select where are you going" />
+              <div class="flexible-wrp">
+                <h6>GO ANYWHERE, ANYTIME</h6>
+                <a target="_blank" href="#" class="flexible-search">
+                  <i class="fas fa-arrow-right"></i>I'm flexible</a>
+              </div>
+            </div>
+
+            <span class="header-separator"></span>
+
+            <!-- typing housing -->
+            <div class="form-grp">
+              <label class="label" for="housing">
+                <i class="fas fa-home"></i>
+                types of housing</label>
+              <select name="" id="housing" class="housing">
+                <option value="">select type</option>
+                <option value="">medium</option>
+                <option value="">small</option>
+              </select>
+            </div>
+
+            <span class="header-separator"></span>
+            <!-- check in -->
+            <div class="form-grp">
+              <label class="label" for="check_in">
+                <i class="fas fa-check-circle"></i>
+                check in
+              </label>
+              <input class="form-input" id="check_in" type="text" placeholder="add date" />
+            </div>
+
+            <span class="header-separator"></span>
+
+            <!-- check out -->
+            <div class="form-grp">
+              <label class="label" for="check_out">
+                <i class="fas fa-check-square"></i>
+                check out
+              </label>
+              <input class="form-input" id="check_out" type="text" placeholder="add date" />
+            </div>
+
+            <span class="header-separator"></span>
+            <!-- check out -->
+            <div class="form-grp position-relative" id="guest-form-grp">
+              <label class="label" for="check_out">
+                <i class="fas fa-user"></i> guest
+              </label>
+
+              <input autocomplete="off" class="form-input add-guest" id="add_guest" type="text"
+                placeholder="add guest" />
+              <span class="cancel-guest"><i class="fas fa-times"></i></span>
+
+              <!-- add guest view-->
+              <div class="add_guest_wrapper">
+                <ul>
+                  <li class="d-flex list justify-content-between">
+                    <div>
+                      <span class="guest-title">Adult</span>
+                      <span class="guest-subtitle">ages 12 0r above</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <button class="add-guest-btn">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                      <input value="0" type="text" class="guest_count" />
+                      <button class="add-guest-btn">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="d-flex list justify-content-between">
+                    <div>
+                      <span class="guest-title">Adult</span>
+                      <span class="guest-subtitle">ages 12 0r above</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <button class="add-guest-btn">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                      <input value="0" type="text" class="guest_count" />
+                      <button class="add-guest-btn">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="d-flex list justify-content-between">
+                    <div>
+                      <span class="guest-title">Adult</span>
+                      <span class="guest-subtitle">ages 12 0r above</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <button class="add-guest-btn">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                      <input value="0" type="text" class="guest_count" />
+                      <button class="add-guest-btn">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <button class="btn1 header-search-btn">search</button>
+          </div>
+          <div class="header-input">
+            <input class="input" placeholder="start your search" type="text" disabled />
+            <span class="search-btn"><i class="fas fa-search"></i></span>
+          </div>
+        </div>
+
+        <div class="col-xl-2 col-lg-2 col-sm-6 d-flex justify-content-center justify-content-xl-end">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-globe"></i>
+            <div class="form-grp">
+              <select name="" id="">
+                <option value="">usa</option>
+                <option value="">aus</option>
+              </select>
+            </div>
+
+            <button class="login-btn">
+              <i class="fas fa-user-circle login-icon"></i> login
             </button>
-            <img class="logo" src="./assets/images/logo.png" alt="logo" />
-          </div>
-
-          <div
-            class="col-xl-8 col-lg-9 col-md-12 my-4 my-xl-0 d-none d-lg-block position-relative"
-          >
-            <div class="header-info-wrapper d-flex align-items-center">
-              <!-- location -->
-              <div class="form-grp location">
-                <label class="label" for="location"
-                  ><i class="fas fa-map-marker-alt"></i> location</label
-                >
-
-                <input
-                  autocomplete="off"
-                  class="form-input"
-                  id="location"
-                  type="text"
-                  placeholder="select where are you going"
-                />
-                <div class="flexible-wrp">
-                  <h6>GO ANYWHERE, ANYTIME</h6>
-                  <a target="_blank" href="#" class="flexible-search">
-                    <i class="fas fa-arrow-right"></i>I'm flexible</a
-                  >
-                </div>
-              </div>
-
-              <span class="header-separator"></span>
-
-              <!-- typing housing -->
-              <div class="form-grp">
-                <label class="label" for="housing">
-                  <i class="fas fa-home"></i>
-                  types of housing</label
-                >
-                <select name="" id="housing" class="housing">
-                  <option value="">select type</option>
-                  <option value="">medium</option>
-                  <option value="">small</option>
-                </select>
-              </div>
-
-              <span class="header-separator"></span>
-              <!-- check in -->
-              <div class="form-grp">
-                <label class="label" for="check_in">
-                  <i class="fas fa-check-circle"></i>
-                  check in
-                </label>
-                <input
-                  class="form-input"
-                  id="check_in"
-                  type="text"
-                  placeholder="add date"
-                />
-              </div>
-
-              <span class="header-separator"></span>
-
-              <!-- check out -->
-              <div class="form-grp">
-                <label class="label" for="check_out">
-                  <i class="fas fa-check-square"></i>
-                  check out
-                </label>
-                <input
-                  class="form-input"
-                  id="check_out"
-                  type="text"
-                  placeholder="add date"
-                />
-              </div>
-
-              <span class="header-separator"></span>
-              <!-- check out -->
-              <div class="form-grp position-relative" id="guest-form-grp">
-                <label class="label" for="check_out">
-                  <i class="fas fa-user"></i> guest
-                </label>
-
-                <input
-                  autocomplete="off"
-                  class="form-input add-guest"
-                  id="add_guest"
-                  type="text"
-                  placeholder="add guest"
-                />
-                <span class="cancel-guest"><i class="fas fa-times"></i></span>
-
-                <!-- add guest view-->
-                <div class="add_guest_wrapper">
-                  <ul>
-                    <li class="d-flex list justify-content-between">
-                      <div>
-                        <span class="guest-title">Adult</span>
-                        <span class="guest-subtitle">ages 12 0r above</span>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <button class="add-guest-btn">
-                          <i class="fas fa-plus"></i>
-                        </button>
-                        <input value="0" type="text" class="guest_count" />
-                        <button class="add-guest-btn">
-                          <i class="fas fa-minus"></i>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="d-flex list justify-content-between">
-                      <div>
-                        <span class="guest-title">Adult</span>
-                        <span class="guest-subtitle">ages 12 0r above</span>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <button class="add-guest-btn">
-                          <i class="fas fa-plus"></i>
-                        </button>
-                        <input value="0" type="text" class="guest_count" />
-                        <button class="add-guest-btn">
-                          <i class="fas fa-minus"></i>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="d-flex list justify-content-between">
-                      <div>
-                        <span class="guest-title">Adult</span>
-                        <span class="guest-subtitle">ages 12 0r above</span>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <button class="add-guest-btn">
-                          <i class="fas fa-plus"></i>
-                        </button>
-                        <input value="0" type="text" class="guest_count" />
-                        <button class="add-guest-btn">
-                          <i class="fas fa-minus"></i>
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <button class="btn1 header-search-btn">search</button>
-            </div>
-            <div class="header-input">
-              <input
-                class="input"
-                placeholder="start your search"
-                type="text"
-                disabled
-              />
-              <span class="search-btn"><i class="fas fa-search"></i></span>
-            </div>
-          </div>
-
-          <div
-            class="col-xl-2 col-lg-2 col-sm-6 d-flex justify-content-center justify-content-xl-end"
-          >
-            <div class="d-flex align-items-center">
-              <i class="fas fa-globe"></i>
-              <div class="form-grp">
-                <select name="" id="">
-                  <option value="">usa</option>
-                  <option value="">aus</option>
-                </select>
-              </div>
-
-              <button class="login-btn">
-                <i class="fas fa-user-circle login-icon"></i> login
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- modal -->
-    <div
-      class="modal fade"
-      id="clientInfo"
-      tabindex="-1"
-      aria-labelledby="clientInfoLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content mobile-info-wrapper">
-          <div class="modal-header">
-            <h5 class="modal-title" id="clientInfoLabel">where ar you going</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div
-              class="mobile-header-info-wrapper header-info-wrapper modal-header-info-wrapper"
-            >
-              <!-- location -->
-              <div class="form-grp location">
-                <label class="label" for="location"
-                  ><i class="fas fa-map-marker-alt"></i> location</label
-                >
-
-                <input
-                  autocomplete="off"
-                  class="form-input"
-                  id="location"
-                  type="text"
-                  placeholder="select where are you going"
-                />
-              </div>
-
-              <!-- typing housing -->
-              <div class="form-grp">
-                <label class="label" for="housing">
-                  <i class="fas fa-home"></i>
-                  types of housing</label
-                >
-                <select name="" id="housing" class="mobile-housing">
-                  <option value="">select type</option>
-                  <option value="">medium</option>
-                  <option value="">small</option>
-                </select>
-              </div>
-
-              <!-- check in -->
-              <div class="form-grp">
-                <label class="label" for="check_in">
-                  <i class="fas fa-check-circle"></i>
-                  check in
-                </label>
-                <input
-                  class="form-input"
-                  id="check_in"
-                  type="date"
-                  placeholder="add date"
-                />
-              </div>
-
-              <!-- check out -->
-              <div class="form-grp">
-                <label class="label" for="check_out">
-                  <i class="fas fa-check-square"></i>
-                  check out
-                </label>
-                <input
-                  class="form-input"
-                  id="check_out"
-                  type="date"
-                  placeholder="add date"
-                />
-              </div>
-
-              <!-- check out -->
-              <div class="form-grp position-relative" id="guest-form-grp">
-                <label class="label" for="check_out">
-                  <i class="fas fa-user"></i> guest
-                </label>
-
-                <input
-                  autocomplete="off"
-                  class="form-input add-guest"
-                  id="add_guest"
-                  type="text"
-                  placeholder="add guest"
-                />
-                <span class="cancel-guest"><i class="fas fa-times"></i></span>
-
-                <!-- add guest view-->
-                <div class="add_guest_wrapper">
-                  <ul>
-                    <li class="d-flex list justify-content-between">
-                      <div>
-                        <span class="guest-title">Adult</span>
-                        <span class="guest-subtitle">ages 12 0r above</span>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <button class="add-guest-btn">
-                          <i class="fas fa-plus"></i>
-                        </button>
-                        <input value="0" type="text" class="guest_count" />
-                        <button class="add-guest-btn">
-                          <i class="fas fa-minus"></i>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="d-flex list justify-content-between">
-                      <div>
-                        <span class="guest-title">Adult</span>
-                        <span class="guest-subtitle">ages 12 0r above</span>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <button class="add-guest-btn">
-                          <i class="fas fa-plus"></i>
-                        </button>
-                        <input value="0" type="text" class="guest_count" />
-                        <button class="add-guest-btn">
-                          <i class="fas fa-minus"></i>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="d-flex list justify-content-between">
-                      <div>
-                        <span class="guest-title">Adult</span>
-                        <span class="guest-subtitle">ages 12 0r above</span>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <button class="add-guest-btn">
-                          <i class="fas fa-plus"></i>
-                        </button>
-                        <input value="0" type="text" class="guest_count" />
-                        <button class="add-guest-btn">
-                          <i class="fas fa-minus"></i>
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <button type="button" class="btn1 header-search-btn">
-                search
-              </button>
-            </div>
           </div>
         </div>
       </div>
     </div>
+  </header>
 
-    <!-- breacurmb area -->
-    <div class="container">
-      <div
-        class="breadcrumb-section"
-        style="background-image: url('./assets//images/breadcrumb.png')"
-      >
-        <div class="row">
-          <div class="col-12 breadcrumb-wrapper">
-            <h2 class="bread-title mb-3">To Travel Is To Live</h2>
-            <nav aria-label="breadcrumb  mt-60">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Place to go
+  <!-- modal -->
+  <div class="modal fade" id="clientInfo" tabindex="-1" aria-labelledby="clientInfoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content mobile-info-wrapper">
+        <div class="modal-header">
+          <h5 class="modal-title" id="clientInfoLabel">where ar you going</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mobile-header-info-wrapper header-info-wrapper modal-header-info-wrapper">
+            <!-- location -->
+            <div class="form-grp location">
+              <label class="label" for="location"><i class="fas fa-map-marker-alt"></i> location</label>
+
+              <input autocomplete="off" class="form-input" id="location" type="text"
+                placeholder="select where are you going" />
+            </div>
+
+            <!-- typing housing -->
+            <div class="form-grp">
+              <label class="label" for="housing">
+                <i class="fas fa-home"></i>
+                types of housing</label>
+              <select name="" id="housing" class="mobile-housing">
+                <option value="">select type</option>
+                <option value="">medium</option>
+                <option value="">small</option>
+              </select>
+            </div>
+
+            <!-- check in -->
+            <div class="form-grp">
+              <label class="label" for="check_in">
+                <i class="fas fa-check-circle"></i>
+                check in
+              </label>
+              <input class="form-input" id="check_in" type="date" placeholder="add date" />
+            </div>
+
+            <!-- check out -->
+            <div class="form-grp">
+              <label class="label" for="check_out">
+                <i class="fas fa-check-square"></i>
+                check out
+              </label>
+              <input class="form-input " id="check_out" type="date" placeholder="add date" />
+            </div>
+
+            <!-- check out -->
+            <div class="form-grp position-relative" id="guest-form-grp">
+              <label class="label" for="check_out">
+                <i class="fas fa-user"></i> guest
+              </label>
+
+              <input autocomplete="off" class="form-input add-guest" id="add_guest" type="text"
+                placeholder="add guest" />
+              <span class="cancel-guest"><i class="fas fa-times"></i></span>
+            </div>
+
+            <!-- add guest view-->
+            <div class="add_guest_wrapper">
+              <ul>
+                <li class="d-flex list justify-content-between">
+                  <div>
+                    <span class="guest-title">Adult</span>
+                    <span class="guest-subtitle">ages 12 0r above</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <button class="add-guest-btn">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                    <input value="0" type="text" class="guest_count" />
+                    <button class="add-guest-btn">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
                 </li>
-              </ol>
-            </nav>
+                <li class="d-flex list justify-content-between">
+                  <div>
+                    <span class="guest-title">Adult</span>
+                    <span class="guest-subtitle">ages 12 0r above</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <button class="add-guest-btn">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                    <input value="0" type="text" class="guest_count" />
+                    <button class="add-guest-btn">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                </li>
+                <li class="d-flex list justify-content-between">
+                  <div>
+                    <span class="guest-title">Adult</span>
+                    <span class="guest-subtitle">ages 12 0r above</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <button class="add-guest-btn">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                    <input value="0" type="text" class="guest_count" />
+                    <button class="add-guest-btn">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
+
+          <button type="button" class="btn1 header-search-btn">
+            search
+          </button>
         </div>
       </div>
     </div>
+  </div>
+  </div>
 
-    <!-- content -->
-    <div class="container mt-80">
+  <!-- breacurmb area -->
+  <div class="container">
+    <div class="breadcrumb-section" style="background-image: url('./assets//images/breadcrumb.png')">
       <div class="row">
-        <div class="col-lg-4 col-xl-3">
-          <!-- sidebar widget-->
-          <div class="travel-sidebar-widget search-place">
-            <h4 class="mb-3">search</h4>
-            <!-- types of housing -->
-            <div class="form-grp">
-              <label class="label mb-3" for="housing">
-                <i class="fas fa-home"></i>
-                types of housing</label
-              >
-              <select name="" id="housing" class="housing">
-                <option value="">Honeymoon</option>
-                <option value="">Honeymoon</option>
-                <option value="">Honeymoon</option>
-              </select>
-            </div>
-
-            <!-- check in/ check out -->
-            <div class="row mt-5">
-              <div class="col-6 form-grp mr-4">
-                <label class="label mt-3" for="check_in">
-                  <i class="fas fa-check-circle"></i>
-                  check in
-                </label>
-                <input
-                  class="form-input mt-3"
-                  id="check_in"
-                  type="date"
-                  placeholder="add date"
-                />
-              </div>
-              <div class="col-6 form-grp">
-                <label class="label mt-3" for="check_out">
-                  <i class="fas fa-check-square"></i>
-                  check out
-                </label>
-                <input
-                  class="form-input mt-3"
-                  id="check_out"
-                  type="date"
-                  placeholder="add date"
-                />
-              </div>
-            </div>
-
-            <!-- guest -->
-            <div class="form-grp mt-3">
-              <label class="label mb-3" for="guest">
-                <i class="fas fa-user"></i> guest</label
-              >
-              <select name="" id="guest" class="housing">
-                <option value="">1</option>
-                <option value="">5</option>
-                <option value="">10</option>
-              </select>
-            </div>
-
-            <!-- search now -->
-            <button class="btn1 mt-3 w-100">search now</button>
-          </div>
-
-          <!-- sidebar widget -->
-          <div class="travel-sidebar-widget search-place mt-4">
-            <h4 class="mb-3">Filter by</h4>
-            <!-- bedrooms -->
-            <div class="form-grp">
-              <label class="label mb-3" for="housing">
-                <i class="fas fa-home"></i>
-                Bedrooms</label
-              >
-              <select name="" id="housing" class="housing">
-                <option value="">2</option>
-                <option value="">4</option>
-                <option value="">6</option>
-              </select>
-            </div>
-
-            <!-- checkbox meals -->
-            <span class="label mt-60 d-block">
-              <i class="fas fa-check-circle"></i> checkboxes meals</span
-            >
-            <div class="checkbox-wrapper">
-              <div class="single-checkbox">
-                <input
-                  type="checkbox"
-                  checked
-                  class="check-with-label"
-                  id="id_1"
-                />
-                <label class="label-for-check" for="id_1">
-                  <i class="fas fa-check-circle"></i>
-                  wifi
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input type="checkbox" class="check-with-label" id="id_2" />
-                <label class="label-for-check" for="id_2">
-                  <i class="fas fa-check-circle"></i>
-                  pool
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input type="checkbox" class="check-with-label" id="id_3" />
-                <label class="label-for-check" for="id_3">
-                  <i class="fas fa-check-circle"></i>
-                  kitchen
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input
-                  type="checkbox"
-                  checked
-                  class="check-with-label"
-                  id="id_4"
-                />
-                <label class="label-for-check" for="id_4">
-                  <i class="fas fa-check-circle"></i>
-                  air coditioner
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input type="checkbox" class="check-with-label" id="id_5" />
-                <label class="label-for-check" for="id_5">
-                  <i class="fas fa-check-circle"></i>
-                  electricity
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input type="checkbox" class="check-with-label" id="id_6" />
-                <label class="label-for-check" for="id_6">
-                  <i class="fas fa-check-circle"></i>
-                  dining area
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input type="checkbox" class="check-with-label" id="id_7" />
-                <label class="label-for-check" for="id_7">
-                  <i class="fas fa-check-circle"></i>
-                  heating
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input type="checkbox" class="check-with-label" id="id_8" />
-                <label class="label-for-check" for="id_8">
-                  <i class="fas fa-check-circle"></i>
-                  hot tub
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input type="checkbox" class="check-with-label" id="id_9" />
-                <label class="label-for-check" for="id_9">
-                  <i class="fas fa-check-circle"></i>
-                  internet
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input type="checkbox" class="check-with-label" id="id_10" />
-                <label class="label-for-check" for="id_10">
-                  <i class="fas fa-check-circle"></i>
-                  suitable for events
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input type="checkbox" class="check-with-label" id="id_11" />
-                <label class="label-for-check" for="id_11">
-                  <i class="fas fa-check-circle"></i>
-                  garage
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input type="checkbox" class="check-with-label" id="id_12" />
-                <label class="label-for-check" for="id_12">
-                  <i class="fas fa-check-circle"></i>
-                  storage
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input type="checkbox" class="check-with-label" id="id_13" />
-                <label class="label-for-check" for="id_13">
-                  <i class="fas fa-check-circle"></i>
-                  security
-                </label>
-              </div>
-              <div class="single-checkbox">
-                <input type="checkbox" class="check-with-label" id="id_14" />
-                <label class="label-for-check" for="id_14">
-                  <i class="fas fa-check-circle"></i>
-                  gym
-                </label>
-              </div>
-            </div>
-          </div>
+        <div class="col-12 breadcrumb-wrapper">
+          <h2 class="bread-title mb-3">To Travel Is To Live</h2>
+          <nav aria-label="breadcrumb  mt-60">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Place to go
+              </li>
+            </ol>
+          </nav>
         </div>
-        <div class="col-lg-8 col-xl-9 mt-5 mt-lg-0">
-          <div class="row">
-            <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
-              <div class="single-travel-package">
-                <img
-                  class="travel-img mb-3"
-                  src="./assets/images/p1.png"
-                  alt="img1"
-                />
+      </div>
+    </div>
+  </div>
 
-                <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
+  <!-- content -->
+  <div class="container mt-80">
+    <div class="row">
+      <div class="col-lg-4 col-xl-3">
+        <!-- sidebar widget-->
+        <div class="travel-sidebar-widget search-place">
+          <h4 class="mb-3">search</h4>
+          <!-- types of housing -->
+          <div class="form-grp">
+            <label class="label mb-3" for="housing">
+              <i class="fas fa-home"></i>
+              types of housing</label>
+            <select name="" id="housing" class="housing">
+              <option value="">Honeymoon</option>
+              <option value="">Honeymoon</option>
+              <option value="">Honeymoon</option>
+            </select>
+          </div>
 
-                <div class="d-flex mb-2">
-                  <span class="single-location me-2">Akasdhood South</span>
-                  <span class="single-review"
-                    >Review (<i class="fas fa-star"></i> 4.8)</span
-                  >
-                </div>
-                <span class="single-price"
-                  >start at
-                  <span> $45.00</span>
-                </span>
-              </div>
+          <!-- check in/ check out -->
+          <div class="row mt-5">
+            <div class="col-6 form-grp mr-4">
+              <label class="label mt-3" for="check_in">
+                <i class="fas fa-check-circle"></i>
+                check in
+              </label>
+              <input class="form-input mt-3" id="check_in" type="date" placeholder="add date" />
             </div>
-            <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
-              <div class="single-travel-package">
-                <img
-                  class="travel-img mb-3"
-                  src="./assets/images/p2.png"
-                  alt="img1"
-                />
-
-                <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
-
-                <div class="d-flex mb-2">
-                  <span class="single-location me-2">Akasdhood South</span>
-                  <span class="single-review"
-                    >Review (<i class="fas fa-star"></i> 4.8)</span
-                  >
-                </div>
-                <span class="single-price"
-                  >start at
-                  <span> $45.00</span>
-                </span>
-              </div>
+            <div class="col-6 form-grp">
+              <label class="label mt-3" for="check_out">
+                <i class="fas fa-check-square"></i>
+                check out
+              </label>
+              <input class="form-input mt-3" id="check_out" type="date" placeholder="add date" />
             </div>
-            <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
-              <div class="single-travel-package">
-                <img
-                  class="travel-img mb-3"
-                  src="./assets/images/p3.png"
-                  alt="img1"
-                />
+          </div>
 
-                <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
+          <!-- guest -->
+          <div class="form-grp mt-3">
+            <label class="label mb-3" for="guest">
+              <i class="fas fa-user"></i> guest</label>
+            <select name="" id="guest" class="housing">
+              <option value="">1</option>
+              <option value="">5</option>
+              <option value="">10</option>
+            </select>
+          </div>
 
-                <div class="d-flex mb-2">
-                  <span class="single-location me-2">Akasdhood South</span>
-                  <span class="single-review"
-                    >Review (<i class="fas fa-star"></i> 4.8)</span
-                  >
-                </div>
-                <span class="single-price"
-                  >start at
-                  <span> $45.00</span>
-                </span>
-              </div>
+          <!-- search now -->
+          <button class="btn1 mt-3 w-100">search now</button>
+        </div>
+
+        <!-- sidebar widget -->
+        <div class="travel-sidebar-widget search-place mt-4">
+          <h4 class="mb-3">Filter by</h4>
+          <!-- bedrooms -->
+          <div class="form-grp">
+            <label class="label mb-3" for="housing">
+              <i class="fas fa-home"></i>
+              Bedrooms</label>
+            <select name="" id="housing" class="housing">
+              <option value="">2</option>
+              <option value="">4</option>
+              <option value="">6</option>
+            </select>
+          </div>
+
+          <!-- checkbox meals -->
+          <span class="label mt-60 d-block">
+            <i class="fas fa-check-circle"></i> checkboxes meals</span>
+          <div class="checkbox-wrapper">
+            <div class="single-checkbox">
+              <input type="checkbox" checked class="check-with-label" id="id_1" />
+              <label class="label-for-check" for="id_1">
+                <i class="fas fa-check-circle"></i>
+                wifi
+              </label>
             </div>
-            <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
-              <div class="single-travel-package">
-                <img
-                  class="travel-img mb-3"
-                  src="./assets/images/p4.png"
-                  alt="img1"
-                />
-
-                <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
-
-                <div class="d-flex mb-2">
-                  <span class="single-location me-2">Akasdhood South</span>
-                  <span class="single-review"
-                    >Review (<i class="fas fa-star"></i> 4.8)</span
-                  >
-                </div>
-                <span class="single-price"
-                  >start at
-                  <span> $45.00</span>
-                </span>
-              </div>
+            <div class="single-checkbox">
+              <input type="checkbox" class="check-with-label" id="id_2" />
+              <label class="label-for-check" for="id_2">
+                <i class="fas fa-check-circle"></i>
+                pool
+              </label>
             </div>
-            <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
-              <div class="single-travel-package">
-                <img
-                  class="travel-img mb-3"
-                  src="./assets/images/p1.png"
-                  alt="img1"
-                />
-
-                <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
-
-                <div class="d-flex mb-2">
-                  <span class="single-location me-2">Akasdhood South</span>
-                  <span class="single-review"
-                    >Review (<i class="fas fa-star"></i> 4.8)</span
-                  >
-                </div>
-                <span class="single-price"
-                  >start at
-                  <span> $45.00</span>
-                </span>
-              </div>
+            <div class="single-checkbox">
+              <input type="checkbox" class="check-with-label" id="id_3" />
+              <label class="label-for-check" for="id_3">
+                <i class="fas fa-check-circle"></i>
+                kitchen
+              </label>
             </div>
-            <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
-              <div class="single-travel-package">
-                <img
-                  class="travel-img mb-3"
-                  src="./assets/images/p2.png"
-                  alt="img1"
-                />
-
-                <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
-
-                <div class="d-flex mb-2">
-                  <span class="single-location me-2">Akasdhood South</span>
-                  <span class="single-review"
-                    >Review (<i class="fas fa-star"></i> 4.8)</span
-                  >
-                </div>
-                <span class="single-price"
-                  >start at
-                  <span> $45.00</span>
-                </span>
-              </div>
+            <div class="single-checkbox">
+              <input type="checkbox" checked class="check-with-label" id="id_4" />
+              <label class="label-for-check" for="id_4">
+                <i class="fas fa-check-circle"></i>
+                air coditioner
+              </label>
             </div>
-            <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
-              <div class="single-travel-package">
-                <img
-                  class="travel-img mb-3"
-                  src="./assets/images/p3.png"
-                  alt="img1"
-                />
-
-                <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
-
-                <div class="d-flex mb-2">
-                  <span class="single-location me-2">Akasdhood South</span>
-                  <span class="single-review"
-                    >Review (<i class="fas fa-star"></i> 4.8)</span
-                  >
-                </div>
-                <span class="single-price"
-                  >start at
-                  <span> $45.00</span>
-                </span>
-              </div>
+            <div class="single-checkbox">
+              <input type="checkbox" class="check-with-label" id="id_5" />
+              <label class="label-for-check" for="id_5">
+                <i class="fas fa-check-circle"></i>
+                electricity
+              </label>
             </div>
-            <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
-              <div class="single-travel-package">
-                <img
-                  class="travel-img mb-3"
-                  src="./assets/images/p4.png"
-                  alt="img1"
-                />
-
-                <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
-
-                <div class="d-flex mb-2">
-                  <span class="single-location me-2">Akasdhood South</span>
-                  <span class="single-review"
-                    >Review (<i class="fas fa-star"></i> 4.8)</span
-                  >
-                </div>
-                <span class="single-price"
-                  >start at
-                  <span> $45.00</span>
-                </span>
-              </div>
+            <div class="single-checkbox">
+              <input type="checkbox" class="check-with-label" id="id_6" />
+              <label class="label-for-check" for="id_6">
+                <i class="fas fa-check-circle"></i>
+                dining area
+              </label>
+            </div>
+            <div class="single-checkbox">
+              <input type="checkbox" class="check-with-label" id="id_7" />
+              <label class="label-for-check" for="id_7">
+                <i class="fas fa-check-circle"></i>
+                heating
+              </label>
+            </div>
+            <div class="single-checkbox">
+              <input type="checkbox" class="check-with-label" id="id_8" />
+              <label class="label-for-check" for="id_8">
+                <i class="fas fa-check-circle"></i>
+                hot tub
+              </label>
+            </div>
+            <div class="single-checkbox">
+              <input type="checkbox" class="check-with-label" id="id_9" />
+              <label class="label-for-check" for="id_9">
+                <i class="fas fa-check-circle"></i>
+                internet
+              </label>
+            </div>
+            <div class="single-checkbox">
+              <input type="checkbox" class="check-with-label" id="id_10" />
+              <label class="label-for-check" for="id_10">
+                <i class="fas fa-check-circle"></i>
+                suitable for events
+              </label>
+            </div>
+            <div class="single-checkbox">
+              <input type="checkbox" class="check-with-label" id="id_11" />
+              <label class="label-for-check" for="id_11">
+                <i class="fas fa-check-circle"></i>
+                garage
+              </label>
+            </div>
+            <div class="single-checkbox">
+              <input type="checkbox" class="check-with-label" id="id_12" />
+              <label class="label-for-check" for="id_12">
+                <i class="fas fa-check-circle"></i>
+                storage
+              </label>
+            </div>
+            <div class="single-checkbox">
+              <input type="checkbox" class="check-with-label" id="id_13" />
+              <label class="label-for-check" for="id_13">
+                <i class="fas fa-check-circle"></i>
+                security
+              </label>
+            </div>
+            <div class="single-checkbox">
+              <input type="checkbox" class="check-with-label" id="id_14" />
+              <label class="label-for-check" for="id_14">
+                <i class="fas fa-check-circle"></i>
+                gym
+              </label>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- blog section -->
-    <div class="home-blog-section pt-80">
-      <div class="container">
+      <div class="col-lg-8 col-xl-9 mt-5 mt-lg-0">
         <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-            <div
-              class="single-home-blog"
-              style="background-image: url('./assets/images/sb1.png')"
-            >
-              <span class="overlay"></span>
-              <a href="#" class="mb-3 title">Things to do on your trip</a>
-              <a href="" class="btn1 btn2">Experiences</a>
+          <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
+            <div class="single-travel-package">
+              <img class="travel-img mb-3" src="./assets/images/p1.png" alt="img1" />
+
+              <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
+
+              <div class="d-flex mb-2">
+                <span class="single-location me-2">Akasdhood South</span>
+                <span class="single-review">Review (<i class="fas fa-star"></i> 4.8)</span>
+              </div>
+              <span class="single-price">start at
+                <span> $45.00</span>
+              </span>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-            <div
-              class="single-home-blog"
-              style="background-image: url('./assets/images/sb2.png')"
-            >
-              <span class="overlay"></span>
-              <a href="#" class="mb-3 title">Things to do on your trip</a>
-              <a href="" class="btn1 btn2">Experiences</a>
+          <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
+            <div class="single-travel-package">
+              <img class="travel-img mb-3" src="./assets/images/p2.png" alt="img1" />
+
+              <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
+
+              <div class="d-flex mb-2">
+                <span class="single-location me-2">Akasdhood South</span>
+                <span class="single-review">Review (<i class="fas fa-star"></i> 4.8)</span>
+              </div>
+              <span class="single-price">start at
+                <span> $45.00</span>
+              </span>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-            <div
-              class="single-home-blog"
-              style="background-image: url('./assets/images/sb3.png')"
-            >
-              <span class="overlay"></span>
-              <a href="#" class="mb-3 title">Things to do on your trip</a>
-              <a href="" class="btn1 btn2">Experiences</a>
+          <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
+            <div class="single-travel-package">
+              <img class="travel-img mb-3" src="./assets/images/p3.png" alt="img1" />
+
+              <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
+
+              <div class="d-flex mb-2">
+                <span class="single-location me-2">Akasdhood South</span>
+                <span class="single-review">Review (<i class="fas fa-star"></i> 4.8)</span>
+              </div>
+              <span class="single-price">start at
+                <span> $45.00</span>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
+            <div class="single-travel-package">
+              <img class="travel-img mb-3" src="./assets/images/p4.png" alt="img1" />
+
+              <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
+
+              <div class="d-flex mb-2">
+                <span class="single-location me-2">Akasdhood South</span>
+                <span class="single-review">Review (<i class="fas fa-star"></i> 4.8)</span>
+              </div>
+              <span class="single-price">start at
+                <span> $45.00</span>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
+            <div class="single-travel-package">
+              <img class="travel-img mb-3" src="./assets/images/p1.png" alt="img1" />
+
+              <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
+
+              <div class="d-flex mb-2">
+                <span class="single-location me-2">Akasdhood South</span>
+                <span class="single-review">Review (<i class="fas fa-star"></i> 4.8)</span>
+              </div>
+              <span class="single-price">start at
+                <span> $45.00</span>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
+            <div class="single-travel-package">
+              <img class="travel-img mb-3" src="./assets/images/p2.png" alt="img1" />
+
+              <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
+
+              <div class="d-flex mb-2">
+                <span class="single-location me-2">Akasdhood South</span>
+                <span class="single-review">Review (<i class="fas fa-star"></i> 4.8)</span>
+              </div>
+              <span class="single-price">start at
+                <span> $45.00</span>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
+            <div class="single-travel-package">
+              <img class="travel-img mb-3" src="./assets/images/p3.png" alt="img1" />
+
+              <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
+
+              <div class="d-flex mb-2">
+                <span class="single-location me-2">Akasdhood South</span>
+                <span class="single-review">Review (<i class="fas fa-star"></i> 4.8)</span>
+              </div>
+              <span class="single-price">start at
+                <span> $45.00</span>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-sm-6 col-12 mb-4">
+            <div class="single-travel-package">
+              <img class="travel-img mb-3" src="./assets/images/p4.png" alt="img1" />
+
+              <a class="single-title mb-2" href="#">SAii Lagoon Maldives</a>
+
+              <div class="d-flex mb-2">
+                <span class="single-location me-2">Akasdhood South</span>
+                <span class="single-review">Review (<i class="fas fa-star"></i> 4.8)</span>
+              </div>
+              <span class="single-price">start at
+                <span> $45.00</span>
+              </span>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- footer -->
-    <footer>
-      <div class="container travel-footer-section">
-        <div class="row justify-content-center">
-          <div
-            class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-12 custome-footer-col mb-4"
-          >
-            <img src="./assets/images/logo.png" class="logo" alt="logo" />
-            <div class="mt-3 d-flex align-items-center">
-              <a href="#">
-                <i class="fab fa-facebook-square footer-icon facebook"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-twitter-square footer-icon twitter"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-youtube footer-icon youtube"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-instagram-square footer-icon instagram"></i>
-              </a>
-            </div>
+  <!-- blog section -->
+  <div class="home-blog-section pt-80">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+          <div class="single-home-blog" style="background-image: url('./assets/images/sb1.png')">
+            <span class="overlay"></span>
+            <a href="#" class="mb-3 title">Things to do on your trip</a>
+            <a href="" class="btn1 btn2">Experiences</a>
           </div>
-          <div
-            class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-12 custome-footer-col mb-4"
-          >
-            <h4 class="mb-3 footer-title">More links</h4>
-            <ul class="footer-menu">
-              <li><a class="link" href="#">about us</a></li>
-              <li><a class="link" href="#">career</a></li>
-              <li><a class="link" href="#">Press kit</a></li>
-              <li><a class="link" href="#">partner</a></li>
-            </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+          <div class="single-home-blog" style="background-image: url('./assets/images/sb2.png')">
+            <span class="overlay"></span>
+            <a href="#" class="mb-3 title">Things to do on your trip</a>
+            <a href="" class="btn1 btn2">Experiences</a>
           </div>
-          <div
-            class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-12 custome-footer-col mb-4"
-          >
-            <h4 class="mb-3 footer-title">Office Address</h4>
-            <ul class="footer-menu">
-              <li>Post Office 124c 12 fivver st, lovethysatt Road 14, UK</li>
-            </ul>
-          </div>
-          <div
-            class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-12 custome-footer-col mb-4"
-          >
-            <h4 class="mb-3 footer-title">Contact Us</h4>
-            <ul class="footer-menu">
-              <li>Email:<a class="link" href="#"> support@domain.com </a></li>
-              <li>Phone:<a class="link" href="#"> 1 (00) 832 2342</a></li>
-            </ul>
-          </div>
-          <div class="col-12 text-center">
-            <span class="custom-hr mb-3"></span>
-            <span>Copyright &#169; 2021 Lovethysalt. All rights reserved</span>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+          <div class="single-home-blog" style="background-image: url('./assets/images/sb3.png')">
+            <span class="overlay"></span>
+            <a href="#" class="mb-3 title">Things to do on your trip</a>
+            <a href="" class="btn1 btn2">Experiences</a>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
 
-    <!-- scroll to up -->
-    <div class="scrollup"><i class="fas fa-arrow-up"></i></div>
+  <!-- footer -->
+  <footer>
+    <div class="container travel-footer-section">
+      <div class="row justify-content-center">
+        <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-12 custome-footer-col mb-4">
+          <img src="./assets/images/logo.png" class="logo" alt="logo" />
+          <div class="mt-3 d-flex align-items-center">
+            <a href="#">
+              <i class="fab fa-facebook-square footer-icon facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter-square footer-icon twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-youtube footer-icon youtube"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram-square footer-icon instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-12 custome-footer-col mb-4">
+          <h4 class="mb-3 footer-title">More links</h4>
+          <ul class="footer-menu">
+            <li><a class="link" href="#">about us</a></li>
+            <li><a class="link" href="#">career</a></li>
+            <li><a class="link" href="#">Press kit</a></li>
+            <li><a class="link" href="#">partner</a></li>
+          </ul>
+        </div>
+        <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-12 custome-footer-col mb-4">
+          <h4 class="mb-3 footer-title">Office Address</h4>
+          <ul class="footer-menu">
+            <li>Post Office 124c 12 fivver st, lovethysatt Road 14, UK</li>
+          </ul>
+        </div>
+        <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-12 custome-footer-col mb-4">
+          <h4 class="mb-3 footer-title">Contact Us</h4>
+          <ul class="footer-menu">
+            <li>Email:<a class="link" href="#"> support@domain.com </a></li>
+            <li>Phone:<a class="link" href="#"> 1 (00) 832 2342</a></li>
+          </ul>
+        </div>
+        <div class="col-12 text-center">
+          <span class="custom-hr mb-3"></span>
+          <span>Copyright &#169; 2021 Lovethysalt. All rights reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Javascript Files -->
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/slick.min.js"></script>
-    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
-    <script src="assets/js/vendor/counterup.min.js"></script>
-    <script src="assets/js/vendor/countdown.js"></script>
-    <script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/vendor/jquery.meanmenu.min.js"></script>
-    <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
-    <script src="assets/js/vendor/waypoints.min.js"></script>
-    <script src="assets/js/vendor/easing.min.js"></script>
-    <script src="assets/js/vendor/jquery-ui.js"></script>
-    <script src="assets/js/vendor/wow.min.js"></script>
-    <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+  <!-- scroll to up -->
+  <div class="scrollup"><i class="fas fa-arrow-up"></i></div>
+
+  <!-- Javascript Files -->
+  <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/vendor/slick.min.js"></script>
+  <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+  <script src="assets/js/vendor/counterup.min.js"></script>
+  <script src="assets/js/vendor/countdown.js"></script>
+  <script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/vendor/jquery.meanmenu.min.js"></script>
+  <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+  <script src="assets/js/vendor/waypoints.min.js"></script>
+  <script src="assets/js/vendor/easing.min.js"></script>
+  <script src="assets/js/vendor/jquery-ui.js"></script>
+  <script src="assets/js/vendor/wow.min.js"></script>
+  <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>

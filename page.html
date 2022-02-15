@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- Page Title -->
+  <title>Page - Travel HTML5 Template</title>
+
+  <!-- Favicon Icon -->
+  <link rel="shortcut icon" href="favicon.png" />
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/font-awsome-all.min.css" />
+  <link rel="stylesheet" href="assets/css/meanmenu.css" />
+  <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/nice-select.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/leaflet.css" />
+</head>
+
+<body>
+  <!-- Preloader Starts -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- header -->
+  <header class="header-section">
+    <div class="container custome-container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-xl-2 col-lg-1 col-sm-6 d-flex justify-content-center justify-content-xl-start">
+          <button type="button" class="btn1 mobile-trigger-btn me-4 d-lg-none" data-bs-toggle="modal"
+            data-bs-target="#clientInfo">
+            <i class="fas fa-bars"></i>
+          </button>
+          <img class="logo" src="./assets/images/logo.png" alt="logo" />
+        </div>
+
+        <div class="col-xl-8 col-lg-9 col-md-12 my-4 my-xl-0 d-none d-lg-block position-relative">
+          <div class="header-info-wrapper d-flex align-items-center">
+            <!-- location -->
+            <div class="form-grp location">
+              <label class="label" for="location"><i class="fas fa-map-marker-alt"></i> location</label>
+
+              <input autocomplete="off" class="form-input" id="location" type="text"
+                placeholder="select where are you going" />
+              <div class="flexible-wrp">
+                <h6>GO ANYWHERE, ANYTIME</h6>
+                <a target="_blank" href="#" class="flexible-search">
+                  <i class="fas fa-arrow-right"></i>I'm flexible</a>
+              </div>
+            </div>
+
+            <span class="header-separator"></span>
+
+            <!-- typing housing -->
+            <div class="form-grp">
+              <label class="label" for="housing">
+                <i class="fas fa-home"></i>
+                types of housing</label>
+              <select name="" id="housing" class="housing">
+                <option value="">select type</option>
+                <option value="">medium</option>
+                <option value="">small</option>
+              </select>
+            </div>
+
+            <span class="header-separator"></span>
+            <!-- check in -->
+            <div class="form-grp">
+              <label class="label" for="check_in">
+                <i class="fas fa-check-circle"></i>
+                check in
+              </label>
+              <input class="form-input" id="check_in" type="text" placeholder="add date" />
+            </div>
+
+            <span class="header-separator"></span>
+
+            <!-- check out -->
+            <div class="form-grp">
+              <label class="label" for="check_out">
+                <i class="fas fa-check-square"></i>
+                check out
+              </label>
+              <input class="form-input" id="check_out" type="text" placeholder="add date" />
+            </div>
+
+            <span class="header-separator"></span>
+            <!-- check out -->
+            <div class="form-grp position-relative" id="guest-form-grp">
+              <label class="label" for="check_out">
+                <i class="fas fa-user"></i> guest
+              </label>
+
+              <input autocomplete="off" class="form-input add-guest" id="add_guest" type="text"
+                placeholder="add guest" />
+              <span class="cancel-guest"><i class="fas fa-times"></i></span>
+
+              <!-- add guest view-->
+              <div class="add_guest_wrapper">
+                <ul>
+                  <li class="d-flex list justify-content-between">
+                    <div>
+                      <span class="guest-title">Adult</span>
+                      <span class="guest-subtitle">ages 12 0r above</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <button class="add-guest-btn">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                      <input value="0" type="text" class="guest_count" />
+                      <button class="add-guest-btn">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="d-flex list justify-content-between">
+                    <div>
+                      <span class="guest-title">Adult</span>
+                      <span class="guest-subtitle">ages 12 0r above</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <button class="add-guest-btn">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                      <input value="0" type="text" class="guest_count" />
+                      <button class="add-guest-btn">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="d-flex list justify-content-between">
+                    <div>
+                      <span class="guest-title">Adult</span>
+                      <span class="guest-subtitle">ages 12 0r above</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <button class="add-guest-btn">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                      <input value="0" type="text" class="guest_count" />
+                      <button class="add-guest-btn">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <button class="btn1 header-search-btn">search</button>
+          </div>
+          <div class="header-input">
+            <input class="input" placeholder="start your search" type="text" disabled />
+            <span class="search-btn"><i class="fas fa-search"></i></span>
+          </div>
+        </div>
+
+        <div class="col-xl-2 col-lg-2 col-sm-6 d-flex justify-content-center justify-content-xl-end">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-globe"></i>
+            <div class="form-grp">
+              <select name="" id="">
+                <option value="">usa</option>
+                <option value="">aus</option>
+              </select>
+            </div>
+
+            <button class="login-btn">
+              <i class="fas fa-user-circle login-icon"></i> login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- modal -->
+  <div class="modal fade" id="clientInfo" tabindex="-1" aria-labelledby="clientInfoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content mobile-info-wrapper">
+        <div class="modal-header">
+          <h5 class="modal-title" id="clientInfoLabel">where ar you going</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mobile-header-info-wrapper header-info-wrapper modal-header-info-wrapper">
+            <!-- location -->
+            <div class="form-grp location">
+              <label class="label" for="location"><i class="fas fa-map-marker-alt"></i> location</label>
+
+              <input autocomplete="off" class="form-input" id="location" type="text"
+                placeholder="select where are you going" />
+            </div>
+
+            <!-- typing housing -->
+            <div class="form-grp">
+              <label class="label" for="housing">
+                <i class="fas fa-home"></i>
+                types of housing</label>
+              <select name="" id="housing" class="mobile-housing">
+                <option value="">select type</option>
+                <option value="">medium</option>
+                <option value="">small</option>
+              </select>
+            </div>
+
+            <!-- check in -->
+            <div class="form-grp">
+              <label class="label" for="check_in">
+                <i class="fas fa-check-circle"></i>
+                check in
+              </label>
+              <input class="form-input" id="check_in" type="date" placeholder="add date" />
+            </div>
+
+            <!-- check out -->
+            <div class="form-grp">
+              <label class="label" for="check_out">
+                <i class="fas fa-check-square"></i>
+                check out
+              </label>
+              <input class="form-input" id="check_out" type="date" placeholder="add date" />
+            </div>
+
+            <!-- check out -->
+            <div class="form-grp position-relative" id="guest-form-grp">
+              <label class="label" for="check_out">
+                <i class="fas fa-user"></i> guest
+              </label>
+
+              <input autocomplete="off" class="form-input add-guest" id="add_guest" type="text"
+                placeholder="add guest" />
+              <span class="cancel-guest"><i class="fas fa-times"></i></span>
+
+              <!-- add guest view-->
+              <div class="add_guest_wrapper">
+                <ul>
+                  <li class="d-flex list justify-content-between">
+                    <div>
+                      <span class="guest-title">Adult</span>
+                      <span class="guest-subtitle">ages 12 0r above</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <button class="add-guest-btn">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                      <input value="0" type="text" class="guest_count" />
+                      <button class="add-guest-btn">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="d-flex list justify-content-between">
+                    <div>
+                      <span class="guest-title">Adult</span>
+                      <span class="guest-subtitle">ages 12 0r above</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <button class="add-guest-btn">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                      <input value="0" type="text" class="guest_count" />
+                      <button class="add-guest-btn">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="d-flex list justify-content-between">
+                    <div>
+                      <span class="guest-title">Adult</span>
+                      <span class="guest-subtitle">ages 12 0r above</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <button class="add-guest-btn">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                      <input value="0" type="text" class="guest_count" />
+                      <button class="add-guest-btn">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <button type="button" class="btn1 header-search-btn">
+              search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- main content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-xl-3 col-md-12">
+        <!-- sidebar widget-->
+        <div class="travel-sidebar-widget search-place booking-form">
+          <h4 class="mb-3 booking-heading">Booking Inquiry From</h4>
+          <!-- name -->
+          <div class="form-grp">
+            <label class="label" for="name"><i class="fas fa-user"></i> Your name *</label>
+            <input class="form-input mt-3 w-100" id="name" type="text" placeholder="Your name" />
+          </div>
+          <!-- email -->
+          <div class="form-grp mt-3">
+            <label class="label" for="name"><i class="fas fa-envelope-open-text"></i> Your e-mail *</label>
+            <input class="form-input mt-3 w-100" id="name" type="email" placeholder="email@mail.com" />
+          </div>
+
+          <!-- Phone Number  -->
+          <div class="form-grp mt-3">
+            <label class="label" for="name"><i class="fas fa-phone-alt"></i> Phone Number *</label>
+            <input class="form-input mt-3 w-100" id="name" type="number" placeholder="0123456" />
+          </div>
+
+          <!-- check in/ check out -->
+          <div class="form-grp mt-4">
+            <label class="label">
+              <i class="fas fa-check-circle"></i>
+              check in -check out *
+            </label>
+            <div class="border mt-3">
+              <input class="form-input borderless" id="check_in" type="date" placeholder="add date" />
+              <input class="form-input borderless" id="check_out" type="date" placeholder="add date" />
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-6">
+              <!-- adults * -->
+              <div class="form-grp">
+                <label class="label" for="adults">
+                  <i class="fas fa-check-circle"></i>
+                  adults *
+                </label>
+                <input class="form-input" id="adults" type="number" />
+              </div>
+            </div>
+            <div class="col-6">
+              <!-- children * -->
+              <div class="form-grp">
+                <label class="label" for="children">
+                  <i class="fas fa-check-square"></i>
+                  children *
+                </label>
+                <input class="form-input " id="children" type="number" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-6">
+              <!-- rooms * -->
+              <div class="form-grp">
+                <label class="label" for="rooms">
+                  <i class="fas fa-check-circle"></i>
+                  room *
+                </label>
+                <input class="form-input" id="rooms" type="number" />
+              </div>
+            </div>
+            <div class="col-6">
+              <!-- nights -->
+              <div class="form-grp">
+                <label class="label" for="nights">
+                  <i class="fas fa-check-square"></i>
+                  night *
+                </label>
+                <input class="form-input " id="nights" type="number" />
+              </div>
+            </div>
+          </div>
+
+          <!-- special request  -->
+          <div class="form-grp mt-3">
+            <label class="label d-block" for="rooms">
+              <i class="fas fa-check-circle"></i>
+              special request *
+            </label>
+            <input class="form-input w-100" id="rooms" type="text" />
+          </div>
+
+
+          <!-- search now -->
+          <button type="submit" class="btn1 mt-3 w-100">submit</button>
+        </div>
+      </div>
+      <div class="col-lg-8 col-xl-9 col-md-12">
+        <!-- breacrumb section -->
+        <div class="breadcrumb-section" style="background-image: url('./assets//images/breadcrumb.png')">
+          <div class="breadcrumb-wrapper">
+            <h2 class="bread-title mb-3">To Travel Is To Live</h2>
+            <nav aria-label="breadcrumb  mt-60">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Place to go
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <!-- single page info -->
+        <div class="main-page-content main-about-section mt-4">
+          <div class="row align-items-center">
+            <div class="col-12 d-flex align-items-start justify-content-between">
+              <div>
+                <h3 class="mb-3">SAii Lagoon Maldives</h3>
+                <div class="d-flex align-items-center mb-40">
+                  <span>Akasdhood South</span>
+                  <span class="review-btn">Review(<i class="fas fa-star"></i> 4.8)</span>
+                </div>
+              </div>
+              <div class="time-info">
+                <span class="title">start at</span>
+                <h6>$45.00</h6>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <h4 class="mb-3">information</h4>
+              <hr class="custom-hr">
+              <p class="mb-3">Located in the Indian Ocean, The Maldives is a dream destination. The mention of
+                Maldives calls to mind visions of an idyllic secluded island paradise, tropical, lush islands, and
+                shimmering turquoise waters and is a place where dreams meet reality. Nowhere on earth can boost sea
+                waters as clear as the Maldives. Scattered across a huge swathe of the Indian Ocean, the Maldives
+                comprises countless strings of tiny islands, only two hundred of which are inhabited.
+              </p>
+
+              <p class="mb-3">
+                With good weather throughout the year, Maldives makes a great choice for an ultimate tropical island
+                getaway. It is the ultimate dream of luxury and tranquility. The Maldives is the perfect destination
+                for those who love the ocean and want to experience a true ‘away-from-it-all stay in paradise</p>
+
+              <p class="mb-3">
+                With good weather throughout the year, Maldives makes a great choice for an ultimate tropical island
+                getaway. </p>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- single page info -->
+        <div class="main-page-content main-about-section mt-4">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <h4 class="mb-3">transfer information</h4>
+              <hr class="custom-hr">
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <ul class="transfer-info">
+                <li class="d-flex justify-content-between">
+                  <span class="transform-title"><i class="fas fa-arrow-alt-circle-right"></i> Location</span>
+                  <span class="transform-content">: Eh`mafushi South Malé Atoll</span>
+                </li>
+                <li class="d-flex justify-content-between">
+                  <span class="transform-title"><i class="fas fa-arrow-alt-circle-right"></i> check in time</span>
+                  <span class="transform-content">: 14:00</span>
+                </li>
+                <li class="d-flex justify-content-between">
+                  <span class="transform-title"><i class="fas fa-arrow-alt-circle-right"></i> check out time</span>
+                  <span class="transform-content">: 12:00</span>
+                </li>
+                <li class="d-flex justify-content-between">
+                  <span class="transform-title"><i class="fas fa-arrow-alt-circle-right"></i> No. of Restaurants</span>
+                  <span class="transform-content">: 4</span>
+                </li>
+                <li class="d-flex justify-content-between">
+                  <span class="transform-title"><i class="fas fa-arrow-alt-circle-right"></i> No. of Bars</span>
+                  <span class="transform-content">: 0</span>
+                </li>
+                <li class="d-flex justify-content-between">
+                  <span class="transform-title"><i class="fas fa-arrow-alt-circle-right"></i> Time to airport</span>
+                  <span class="transform-content">: 15</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-md-12 mt-4 mt-lg-0">
+              <div class="position-relative video-box">
+                <img src="./assets/images//video.png" alt="vdo">
+                <a class="popup-link" href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                  <span class="vdo-icon item-ripple">
+                    <i class="fas fa-caret-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- restaurant rooms -->
+        <div class="main-page-content main-about-section mt-4">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <h4 class="mb-3">restaurant rooms</h4>
+              <hr class="custom-hr">
+            </div>
+            <div class="col-lg-12 d-flex justify-content-center flex-wrap">
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- restaurant facilities -->
+        <div class="main-page-content main-about-section mt-4">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <h4 class="mb-3">restaurant facilities</h4>
+              <hr class="custom-hr">
+            </div>
+            <div class="col-lg-12 d-flex justify-content-center flex-wrap">
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- photos -->
+        <div class="main-page-content main-about-section mt-4">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <h4 class="mb-3">photos</h4>
+              <hr class="custom-hr">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+              <div class="single-photo">
+                <img src="./assets/images/ph1.png" alt="icon">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+              <div class="single-photo">
+                <img src="./assets/images/ph1.png" alt="icon">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+              <div class="single-photo">
+                <img src="./assets/images/ph1.png" alt="icon">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+              <div class="single-photo">
+                <img src="./assets/images/ph1.png" alt="icon">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+              <div class="single-photo">
+                <img src="./assets/images/ph1.png" alt="icon">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+              <div class="single-photo">
+                <img src="./assets/images/ph1.png" alt="icon">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- reacreation-->
+        <div class="main-page-content main-about-section mt-4">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <h4 class="mb-3">recreation</h4>
+              <hr class="custom-hr">
+            </div>
+            <div class="col-lg-12 d-flex justify-content-start flex-wrap">
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+              <div class="single-room">
+                <img class="img-icon mb-3" src="./assets/images/bed1.png" alt="icon">
+                <a href="#" class="link mb-2">Family Bedroom</a>
+                <span class="info">1 Double Bed </span>
+              </div>
+              <div class="single-room">
+                <button class="add-btn">
+                  <img class="img-icon mb-3" src="./assets/images/add.png" alt="icon">
+                  <span href="#" class="link mb-2">add more</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- map-->
+        <div class="main-page-content main-about-section mt-4">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <h4 class="mb-3">where you'll go</h4>
+              <hr class="custom-hr">
+            </div>
+            <div class="col-lg-12 d-flex justify-content-start flex-wrap">
+
+              <!-- map -->
+              <div id="map"></div>
+
+              <h4 class="mt-4">sai lagon malideves</h4>
+              <p class="mt-3">
+                With good weather throughout the year, Maldives makes a great choice for an ultimate tropical island
+                getaway. </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- clients review-->
+        <div class="main-page-content main-about-section mt-4">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <h4 class="mb-3">clients review</h4>
+              <hr class="custom-hr">
+            </div>
+            <!-- slider -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide col-md-6 d-flex justify-content-start flex-wrap">
+                  <div class="single-review">
+                    <img class="user-img" src="./assets/images/user.png" alt="">
+                    <div class="client-review-info">
+                      <div class="d-flex align-items-center mb-2">
+                        <h6 class="me-3">chris don</h6>
+                        <span class="date"> january 2022 (<i class="fas fa-star"></i> 4.8)</span>
+                      </div>
+                      <p class="content">
+                        Sabina and Fuad are great host. I loved the space. It is modern and very welcoming.
+                        Communication
+                        was transparent and they were hospitality.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide col-md-6 d-flex justify-content-start flex-wrap">
+                  <div class="single-review">
+                    <img class="user-img" src="./assets/images/user.png" alt="">
+                    <div class="client-review-info">
+                      <div class="d-flex align-items-center mb-2">
+                        <h6 class="me-3">chris don</h6>
+                        <span class="date"> january 2022 (<i class="fas fa-star"></i> 4.8)</span>
+                      </div>
+                      <p class="content">
+                        Sabina and Fuad are great host. I loved the space. It is modern and very welcoming.
+                        Communication
+                        was transparent and they were hospitality.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide col-md-6 d-flex justify-content-start flex-wrap">
+                  <div class="single-review">
+                    <img class="user-img" src="./assets/images/user.png" alt="">
+                    <div class="client-review-info">
+                      <div class="d-flex align-items-center mb-2">
+                        <h6 class="me-3">chris don</h6>
+                        <span class="date"> january 2022 (<i class="fas fa-star"></i> 4.8)</span>
+                      </div>
+                      <p class="content">
+                        Sabina and Fuad are great host. I loved the space. It is modern and very welcoming.
+                        Communication
+                        was transparent and they were hospitality.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+            <!-- <div class="col-md-6 d-flex justify-content-start flex-wrap">
+              <div class="single-review">
+                <img class="user-img" src="./assets/images/user.png" alt="">
+                <div class="client-review-info">
+                  <div class="d-flex align-items-center mb-2">
+                    <h6 class="me-3">chris don</h6>
+                    <span class="date"> january 2022 (<i class="fas fa-star"></i> 4.8)</span>
+                  </div>
+                  <p class="content">
+                    Sabina and Fuad are great host. I loved the space. It is modern and very welcoming.
+                    Communication
+                    was transparent and they were hospitality.
+                  </p>
+                </div>
+              </div>
+            </div> -->
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <div class="container travel-footer-section mt-80">
+      <div class="row justify-content-center">
+        <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-12 custome-footer-col mb-4">
+          <img src="./assets/images/logo.png" class="logo" alt="logo" />
+          <div class="mt-3 d-flex align-items-center">
+            <a href="#">
+              <i class="fab fa-facebook-square footer-icon facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter-square footer-icon twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-youtube footer-icon youtube"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram-square footer-icon instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-12 custome-footer-col mb-4">
+          <h4 class="mb-3 footer-title">More links</h4>
+          <ul class="footer-menu">
+            <li><a class="link" href="#">about us</a></li>
+            <li><a class="link" href="#">career</a></li>
+            <li><a class="link" href="#">Press kit</a></li>
+            <li><a class="link" href="#">partner</a></li>
+          </ul>
+        </div>
+        <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-12 custome-footer-col mb-4">
+          <h4 class="mb-3 footer-title">Office Address</h4>
+          <ul class="footer-menu">
+            <li>Post Office 124c 12 fivver st, lovethysatt Road 14, UK</li>
+          </ul>
+        </div>
+        <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-12 custome-footer-col mb-4">
+          <h4 class="mb-3 footer-title">Contact Us</h4>
+          <ul class="footer-menu">
+            <li>Email:<a class="link" href="#"> support@domain.com </a></li>
+            <li>Phone:<a class="link" href="#"> 1 (00) 832 2342</a></li>
+          </ul>
+        </div>
+        <div class="col-12 text-center">
+          <span class="custom-hr mb-3"></span>
+          <span>Copyright &#169; 2021 Lovethysalt. All rights reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- scroll to up -->
+  <div class="scrollup"><i class="fas fa-arrow-up"></i></div>
+
+  <!-- Javascript Files -->
+  <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/vendor/slick.min.js"></script>
+  <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+  <script src="assets/js/vendor/counterup.min.js"></script>
+  <script src="assets/js/vendor/countdown.js"></script>
+  <script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/vendor/jquery.meanmenu.min.js"></script>
+  <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+  <script src="assets/js/vendor/waypoints.min.js"></script>
+  <script src="assets/js/vendor/easing.min.js"></script>
+  <script src="assets/js/vendor/jquery-ui.js"></script>
+  <script src="assets/js/vendor/wow.min.js"></script>
+  <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
+  <script src="assets/js/vendor/leaflet.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

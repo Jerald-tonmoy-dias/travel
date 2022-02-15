@@ -114,6 +114,71 @@
             $(this).removeClass('show');
         });
 
+        // vdo popup activation
+        $('.popup-link').magnificPopup({
+            type: 'iframe',
+            // other options
+            iframe: {
+                markup: '<div class="mfp-iframe-scaler">' +
+                    '<div class="mfp-close"></div>' +
+                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                    '</div>',
+
+                patterns: {
+                    youtube: {
+                        index: 'youtube.com/',
+
+                        id: 'v=',
+
+                        src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+                    },
+                    vimeo: {
+                        index: 'vimeo.com/',
+                        id: '/',
+                        src: '//player.vimeo.com/video/%id%?autoplay=1'
+                    },
+                    gmaps: {
+                        index: '//maps.google.',
+                        src: '%id%&output=embed'
+                    }
+
+                },
+
+                srcAction: 'iframe_src',
+            }
+        });
+
+        // map
+        var map = L.map('map').setView([51.505, -0.09], 13);
+
+        var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1
+        }).addTo(map);
+
+        // single page slider
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                768: {
+                    spaceBetween: 30,
+                    slidesPerView: 2,
+                },
+            }
+        });
         /* end point */
     });
 
