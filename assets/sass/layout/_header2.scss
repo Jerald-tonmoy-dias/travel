@@ -51,7 +51,12 @@
     }
     .has-submenu {
       position: relative;
-
+      &::after {
+        // content: "/f0dd";
+        content: "\f0dd";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
       .submenu {
         position: absolute;
         top: 220%;

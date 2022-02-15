@@ -88,6 +88,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include portrait-phone() {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+    }
   }
 }
 

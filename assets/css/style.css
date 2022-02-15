@@ -441,7 +441,7 @@ a {
     position: absolute;
     top: 150%;
     left: 0%;
-    z-index: 1; }
+    z-index: 44; }
     .header-section .flexible-wrp h6 {
       font-weight: 500;
       font-size: 14px;
@@ -785,6 +785,10 @@ a {
           color: #3cd2d1; }
     .header-two-content-wrapper .header-menu-two .has-submenu {
       position: relative; }
+      .header-two-content-wrapper .header-menu-two .has-submenu::after {
+        content: "\f0dd";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900; }
       .header-two-content-wrapper .header-menu-two .has-submenu .submenu {
         position: absolute;
         top: 220%;
@@ -910,7 +914,7 @@ a {
     background: -webkit-linear-gradient(left, rgba(2, 41, 98, 0.734331) 0%, rgba(2, 41, 98, 0) 100%);
     background: -o-linear-gradient(left, rgba(2, 41, 98, 0.734331) 0%, rgba(2, 41, 98, 0) 100%);
     background: linear-gradient(90deg, rgba(2, 41, 98, 0.734331) 0%, rgba(2, 41, 98, 0) 100%);
-    z-index: 998; }
+    z-index: 1; }
   .breadcrumb-section .breadcrumb-wrapper {
     position: relative;
     z-index: 999; }
@@ -2095,6 +2099,11 @@ a {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+  @media (max-width: 575.98px) {
+    .video-box .vdo-icon {
+      width: 30px;
+      height: 30px;
+      line-height: 30px; } }
 
 .single-room {
   background-color: #edf4ff;
