@@ -11,6 +11,9 @@
   }
   .form-input {
     width: 130px;
+    @include desktop() {
+      width: 125px;
+    }
     &.borderless {
       border: none;
     }
@@ -138,7 +141,7 @@
   //   display: none;
 }
 
-.single-review {
+.single-client-review {
   background: $lite-sky;
   padding: 20px;
   display: flex;

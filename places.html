@@ -38,57 +38,150 @@
   </div>
 
   <!-- header -->
-  <header class="header-section">
+  <header class="header-section header-section-2">
     <div class="container custome-container">
       <div class="row align-items-center justify-content-center">
+
         <div class="col-xl-2 col-lg-1 col-sm-6 d-flex justify-content-center justify-content-xl-start">
-          <button type="button" class="btn1 mobile-trigger-btn me-4 d-lg-none" data-bs-toggle="modal"
-            data-bs-target="#clientInfo">
-            <i class="fas fa-bars"></i>
-          </button>
-          <img class="logo" src="./assets/images/logo.png" alt="logo" />
+          <a href="#!" class="menu-toggle me-4 d-lg-none"><i class="fas fa-bars"></i></a>
+
+
+          <a href="index.html">
+            <img class="logo" src="./assets/images/logo.png" alt="logo" />
+          </a>
+
         </div>
 
         <div class="col-xl-8 col-lg-9 col-md-12 my-4 my-xl-0 d-none d-lg-block position-relative">
-          <div class="header-info-wrapper d-flex align-items-center">
+          <div class="header-two-content-wrapper">
+            <!-- search bar -->
+            <div class="header-two-search-bar">
+              <input class="form-control input" type="text" placeholder='start you search'>
+              <button class="header-two-search-btn">search</button>
+            </div>
+            <!-- menu -->
+
+            <ul class="header-menu-two">
+              <li><a class="link" href="#">home</a></li>
+              <li><a class="link" href="#">maldives</a></li>
+              <li class="has-submenu"><a class="link" href="#">places to go</a>
+                <ul class="submenu">
+                  <li><a class="link" href="#">place 1</a>
+                  <li><a class="link" href="#">place 2</a>
+                  <li><a class="link" href="#">place 3</a>
+                </ul>
+              </li>
+              <li><a class="link" href="#">about</a></li>
+            </ul>
+
+
+          </div>
+        </div>
+
+        <div class="col-xl-2 col-lg-2 col-sm-6 d-flex justify-content-center justify-content-xl-end">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-globe"></i>
+            <div class="form-grp">
+              <select name="" id="">
+                <option value="">usa</option>
+                <option value="">aus</option>
+              </select>
+            </div>
+
+            <button class="login-btn">
+              <i class="fas fa-user-circle login-icon"></i> login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- mobile sidebar  -->
+  <div class='dashboard dashboard-compact'>
+    <div class="dashboard-nav ">
+
+      <header>
+        <a href="index.html" class="brand-logo mt-3">
+          <img class="logo" src="./assets/images/logo2.png" alt="">
+        </a>
+        <a href="#!" class="menu-toggle position-menu-toggle">
+          <!-- <i class="fas fa-bars"></i> -->
+          <i class="fas fa-times"></i>
+        </a>
+      </header>
+
+      <nav class="dashboard-nav-list">
+        <a href="#" class="dashboard-nav-item">
+          <i class="fas fa-angle-double-right"></i>
+          Home
+        </a>
+        <a href="#" class="dashboard-nav-item">
+          <i class="fas fa-angle-double-right"></i>
+          maldives
+        </a>
+        <div class='dashboard-nav-dropdown'>
+          <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle">
+            <i class="fas fa-angle-double-right"></i>
+            place
+            to go
+          </a>
+
+          <div class='dashboard-nav-dropdown-menu'>
+            <a href="#" class="dashboard-nav-dropdown-item">place 1</a>
+            <a href="#" class="dashboard-nav-dropdown-item">place 2</a>
+            <a href="#" class="dashboard-nav-dropdown-item">place 3</a>
+            <a href="#" class="dashboard-nav-dropdown-item">place 4</a>
+
+          </div>
+        </div>
+        <a href="#" class="dashboard-nav-item">
+          <i class="fas fa-angle-double-right"></i>
+          about
+        </a>
+      </nav>
+    </div>
+
+  </div>
+
+  <!-- modal -->
+  <div class="modal fade" id="clientInfo" tabindex="-1" aria-labelledby="clientInfoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content mobile-info-wrapper">
+        <div class="modal-header">
+          <h5 class="modal-title" id="clientInfoLabel">where ar you going</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mobile-header-info-wrapper header-info-wrapper modal-header-info-wrapper">
             <!-- location -->
             <div class="form-grp location">
               <label class="label" for="location"><i class="fas fa-map-marker-alt"></i> location</label>
 
               <input autocomplete="off" class="form-input" id="location" type="text"
                 placeholder="select where are you going" />
-              <div class="flexible-wrp">
-                <h6>GO ANYWHERE, ANYTIME</h6>
-                <a target="_blank" href="#" class="flexible-search">
-                  <i class="fas fa-arrow-right"></i>I'm flexible</a>
-              </div>
             </div>
-
-            <span class="header-separator"></span>
 
             <!-- typing housing -->
             <div class="form-grp">
               <label class="label" for="housing">
                 <i class="fas fa-home"></i>
                 types of housing</label>
-              <select name="" id="housing" class="housing">
+              <select name="" id="housing" class="mobile-housing">
                 <option value="">select type</option>
                 <option value="">medium</option>
                 <option value="">small</option>
               </select>
             </div>
 
-            <span class="header-separator"></span>
             <!-- check in -->
             <div class="form-grp">
               <label class="label" for="check_in">
                 <i class="fas fa-check-circle"></i>
                 check in
               </label>
-              <input class="form-input" id="check_in" type="text" placeholder="add date" />
+              <input class="form-input" id="check_in" type="date" placeholder="add date" />
             </div>
-
-            <span class="header-separator"></span>
 
             <!-- check out -->
             <div class="form-grp">
@@ -96,10 +189,9 @@
                 <i class="fas fa-check-square"></i>
                 check out
               </label>
-              <input class="form-input" id="check_out" type="text" placeholder="add date" />
+              <input class="form-input" id="check_out" type="date" placeholder="add date" />
             </div>
 
-            <span class="header-separator"></span>
             <!-- check out -->
             <div class="form-grp position-relative" id="guest-form-grp">
               <label class="label" for="check_out">
@@ -162,151 +254,13 @@
               </div>
             </div>
 
-            <button class="btn1 header-search-btn">search</button>
-          </div>
-          <div class="header-input">
-            <input class="input" placeholder="start your search" type="text" disabled />
-            <span class="search-btn"><i class="fas fa-search"></i></span>
-          </div>
-        </div>
-
-        <div class="col-xl-2 col-lg-2 col-sm-6 d-flex justify-content-center justify-content-xl-end">
-          <div class="d-flex align-items-center">
-            <i class="fas fa-globe"></i>
-            <div class="form-grp">
-              <select name="" id="">
-                <option value="">usa</option>
-                <option value="">aus</option>
-              </select>
-            </div>
-
-            <button class="login-btn">
-              <i class="fas fa-user-circle login-icon"></i> login
+            <button type="button" class="btn1 header-search-btn">
+              search
             </button>
           </div>
         </div>
       </div>
     </div>
-  </header>
-
-  <!-- modal -->
-  <div class="modal fade" id="clientInfo" tabindex="-1" aria-labelledby="clientInfoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content mobile-info-wrapper">
-        <div class="modal-header">
-          <h5 class="modal-title" id="clientInfoLabel">where ar you going</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="mobile-header-info-wrapper header-info-wrapper modal-header-info-wrapper">
-            <!-- location -->
-            <div class="form-grp location">
-              <label class="label" for="location"><i class="fas fa-map-marker-alt"></i> location</label>
-
-              <input autocomplete="off" class="form-input" id="location" type="text"
-                placeholder="select where are you going" />
-            </div>
-
-            <!-- typing housing -->
-            <div class="form-grp">
-              <label class="label" for="housing">
-                <i class="fas fa-home"></i>
-                types of housing</label>
-              <select name="" id="housing" class="mobile-housing">
-                <option value="">select type</option>
-                <option value="">medium</option>
-                <option value="">small</option>
-              </select>
-            </div>
-
-            <!-- check in -->
-            <div class="form-grp">
-              <label class="label" for="check_in">
-                <i class="fas fa-check-circle"></i>
-                check in
-              </label>
-              <input class="form-input" id="check_in" type="date" placeholder="add date" />
-            </div>
-
-            <!-- check out -->
-            <div class="form-grp">
-              <label class="label" for="check_out">
-                <i class="fas fa-check-square"></i>
-                check out
-              </label>
-              <input class="form-input " id="check_out" type="date" placeholder="add date" />
-            </div>
-
-            <!-- check out -->
-            <div class="form-grp position-relative" id="guest-form-grp">
-              <label class="label" for="check_out">
-                <i class="fas fa-user"></i> guest
-              </label>
-
-              <input autocomplete="off" class="form-input add-guest" id="add_guest" type="text"
-                placeholder="add guest" />
-              <span class="cancel-guest"><i class="fas fa-times"></i></span>
-            </div>
-
-            <!-- add guest view-->
-            <div class="add_guest_wrapper">
-              <ul>
-                <li class="d-flex list justify-content-between">
-                  <div>
-                    <span class="guest-title">Adult</span>
-                    <span class="guest-subtitle">ages 12 0r above</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <button class="add-guest-btn">
-                      <i class="fas fa-plus"></i>
-                    </button>
-                    <input value="0" type="text" class="guest_count" />
-                    <button class="add-guest-btn">
-                      <i class="fas fa-minus"></i>
-                    </button>
-                  </div>
-                </li>
-                <li class="d-flex list justify-content-between">
-                  <div>
-                    <span class="guest-title">Adult</span>
-                    <span class="guest-subtitle">ages 12 0r above</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <button class="add-guest-btn">
-                      <i class="fas fa-plus"></i>
-                    </button>
-                    <input value="0" type="text" class="guest_count" />
-                    <button class="add-guest-btn">
-                      <i class="fas fa-minus"></i>
-                    </button>
-                  </div>
-                </li>
-                <li class="d-flex list justify-content-between">
-                  <div>
-                    <span class="guest-title">Adult</span>
-                    <span class="guest-subtitle">ages 12 0r above</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <button class="add-guest-btn">
-                      <i class="fas fa-plus"></i>
-                    </button>
-                    <input value="0" type="text" class="guest_count" />
-                    <button class="add-guest-btn">
-                      <i class="fas fa-minus"></i>
-                    </button>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <button type="button" class="btn1 header-search-btn">
-            search
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
   </div>
 
   <!-- breacurmb area -->
